@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ 
+}
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top right, #FD6B5B, rgba(121, 4, 164, 0.8));
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logoContainer{
+    width: 100%;
+    height: 15%;
+    margin: 0 auto;
+    border: 2px solid blue;
+    padding-top:10px ;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.logoContainer img{
+    width: 15%;
+    background-color: transparent;
+}
+
+.formContainer{
+    width: 100%;
+    height: 80%;
+    border: 2px solid red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.title{
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+    border: 2px solid green;
+    /* margin-top: 10%;
+    margin-bottom: 13%; */
+}
+
+#form{
+    width: 80%;
+    height: 80%;
+    border: 2px solid rgb(126, 209, 126);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+input[type=text],
+input[type=password] {
+    padding-left: 1%;
+    padding-right: 1%;
+
+    border: 1px solid #430038;
+margin-bottom: 10px;
+}
+
+.btn{
+    background: #430038;
+    width: 50%;
+    height: 7%;
+    color: #fff;
+ 
+    /* margin-top: 10%; */
+}
+
