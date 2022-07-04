@@ -28,12 +28,6 @@ import { ActividadComponent } from './pages/actividad/actividad.component';
 import { AddActividadComponent } from './pages/add-actividad/add-actividad.component';
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
-import { PagesComponent } from './pages/pages.component';
-import { ApuntadasComponent } from './pages/apuntadas/apuntadas.component';
-import { CreadasComponent } from './pages/creadas/creadas.component';
-import { FaqsComponent } from './pages/faqs/faqs.component';
-import { ContactoComponent } from './pages/contacto/contacto.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -63,12 +57,6 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     AddActividadComponent,
     MenuLateralComponent,
     PerfilComponent,
-    PagesComponent,
-    ApuntadasComponent,
-    CreadasComponent,
-    FaqsComponent,
-    ContactoComponent,
-    AboutUsComponent
   ],
   imports: [
     BrowserModule,
