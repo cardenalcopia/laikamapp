@@ -9,7 +9,7 @@ export class Pipican {
         this.id_pipican = id_pipican;
         this.imagen = imagen;
         this.titulo = titulo;
-        this.calle = calle
+        this.calle = calle;
         this.distancia = distancia
     }
 }
