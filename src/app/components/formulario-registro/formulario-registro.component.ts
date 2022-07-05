@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario';
+// import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-registro',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioRegistroComponent implements OnInit {
 
-  constructor() { }
+  public usuario: Usuario;
+  public passwordTwo: string;
+
+  constructor() { 
+    this.usuario = new Usuario(null, null, null, null, null);
+  }
 
   ngOnInit(): void {
+  }
+
+  registrarse(){
+
   }
 
 }

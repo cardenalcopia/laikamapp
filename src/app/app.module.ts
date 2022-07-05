@@ -31,6 +31,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 import { FaqsComponent } from './pages/faqs/faqs.component';
 @NgModule({
@@ -68,7 +69,8 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
     AppRoutingModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

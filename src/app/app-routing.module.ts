@@ -10,6 +10,8 @@ import { CreadasComponent } from './pages/creadas/creadas.component';
 import { FaqsComponent } from './pages/faqs/faqs.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -21,10 +23,12 @@ const routes: Routes = [
   {path:"creadas",component:CreadasComponent},
   {path: "faqs",component:FaqsComponent},
   {path:"contacto",component:ContactoComponent},
-  {path:"about-us",component:AboutUsComponent}
+  {path:"about-us",component:AboutUsComponent},
+  {path: "registro", component: RegistroComponent},
+  {path: "login", component: LoginComponent}
 
+]
 
-];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
