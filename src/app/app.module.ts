@@ -32,6 +32,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 
+import { FaqsComponent } from './pages/faqs/faqs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,8 +61,7 @@ import {MatCardModule} from '@angular/material/card';
     AddActividadComponent,
     MenuLateralComponent,
     PerfilComponent,
-    
-    
+    FaqsComponent
   ],
   imports: [
     BrowserModule,
