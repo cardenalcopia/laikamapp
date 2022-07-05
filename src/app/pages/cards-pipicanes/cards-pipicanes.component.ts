@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pipican } from 'src/app/models/pipican';
 
 @Component({
   selector: 'app-cards-pipicanes',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsPipicanesComponent implements OnInit {
 
+  public cards: Pipican[]=[
+    new Pipican(1, "http://www.xn--grupobriceo-beb.es//CMS/Ficheros/Imagenes/20170210-104846.med.jpg", "Parque del tío Pío", "C/Camino de valderribas s/n", "150m"),
+    new Pipican(2, "https://www.deperrus.com/media/k2/items/cache/fd8b0f77d767f1f6640afba6916ff67c_XL.jpg", "Parque", "C/del parque", "250m"),
+    new Pipican(3, "https://estaticos-cdn.prensaiberica.es/clip/4ba759e9-621b-483d-a4fc-26781b20cd86_16-9-aspect-ratio_default_0.jpg", "Pipican", "C/del pipican", "300m"),
+  ]
   constructor() { }
+
+  public getPipican():Pipican[]{
+
+    return this.cards
+  }
 
   ngOnInit(): void {
   }

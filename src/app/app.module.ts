@@ -29,7 +29,9 @@ import { AddActividadComponent } from './pages/add-actividad/add-actividad.compo
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import {MatMenuModule} from '@angular/material/menu';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,8 +67,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     BrowserModule,
     AppRoutingModule,
     MatMenuModule,
-    BrowserAnimationsModule
-   
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
