@@ -73,4 +73,26 @@ input
     color: #fff;
     margin: 0 auto;
     margin-top: 10%;
+    margin-bottom: 5%;
 }
+
+.paco
+
+{
+    width: 100%;
+    height: 70 px;
+    border: 2px solid red;
+    background-color: red;
+    
+}
+.header
+
+{
+    width: 100%;
+    height: 70 px;
+    border: 2px solid red;
+    background-color: red;
+    
+}
+
+

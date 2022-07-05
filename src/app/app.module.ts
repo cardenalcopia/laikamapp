@@ -28,7 +28,7 @@ import { ActividadComponent } from './pages/actividad/actividad.component';
 import { AddActividadComponent } from './pages/add-actividad/add-actividad.component';
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
-
+import { FaqsComponent } from './pages/faqs/faqs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +57,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     AddActividadComponent,
     MenuLateralComponent,
     PerfilComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,
