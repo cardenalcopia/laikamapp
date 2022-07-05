@@ -60,6 +60,10 @@ a{
 
 }
 .card__titulo{
-    font-size: x-large;
+    font-size: xx-large;
+    
+}
 
+.card__calle{
+    font-size: large;
 }
