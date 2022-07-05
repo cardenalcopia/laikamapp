@@ -7,25 +7,120 @@
     </div>
 
     <div class="formContainer row">
-        
+
         <h1 class="title col-6">
             Regístrate
         </h1>
 
-        <form id="form">
-            
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-            <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
-            <input type="text" class="form-control" id="correo" placeholder="Correo">
-            <input type="text" class="form-control" id="nPerros" placeholder="Nº de Perros">
-            <input type="password" class="form-control" id="password" placeholder="Contraseña">
-            <input type="password" class="form-control" id="password2" placeholder="Repetir Contraseña">
-            
-            <app-button [valor]="'Sign In'" ></app-button>
+        <form  #userForm="ngForm" (ngSubmit)="registrarse()">
+
+            <div class="form-group mt-2">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" 
+                [(ngModel)]="usuario.nombre" #nombreRegistro="ngModel"
+                [ngClass]="{'is-invalid': (nombreRegistro.dirty || nombreRegistro.touched) && nombreRegistro.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(nombreRegistro.dirty || nombreRegistro.touched) && nombreRegistro.invalid">
+                    
+                    <div *ngIf="nombreRegistro.errors['required']">
+                        <p class="text-light">
+                            El nombre es obligatorio
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group mt-2">
+
+                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos"
+                [(ngModel)]="usuario.apellidos" #apellidosRegistro="ngModel"
+                [ngClass]="{'is-invalid': (apellidosRegistro.dirty || apellidosRegistro.touched) && apellidosRegistro.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(apellidosRegistro.dirty || apellidosRegistro.touched) && apellidosRegistro.invalid">
+                    
+                    <div *ngIf="apellidosRegistro.errors['required']">
+                        <p class="text-light">
+                            Los apellidos son obligatorios
+                        </p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="form-group mt-2">
+                
+                <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo"
+                [(ngModel)]="usuario.correo" #correoRegistro="ngModel"
+                [ngClass]="{'is-invalid': (correoRegistro.dirty || correoRegistro.touched) && correoRegistro.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(correoRegistro.dirty || correoRegistro.touched) && correoRegistro.invalid">
+                    
+                    <div *ngIf="correoRegistro.errors['required']">
+                        <p class="text-light">
+                            El correo es obligatorio
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group mt-2">
+                
+                <input type="text" class="form-control" id="nPerros" name="nPerros" placeholder="Nº de Perros"
+                [(ngModel)]="usuario.nPerros" #perrosRegistro="ngModel"
+                [ngClass]="{'is-invalid': (perrosRegistro.dirty || perrosRegistro.touched) && perrosRegistro.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(perrosRegistro.dirty || perrosRegistro.touched) && perrosRegistro.invalid">
+                    
+                    <div *ngIf="perrosRegistro.errors['required']">
+                        <p class="text-light">
+                            El número de perros es obligatorio
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group mt-2">
+                
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña"
+                [(ngModel)]="usuario.password" #passwordRegistro="ngModel"
+                [ngClass]="{'is-invalid': (passwordRegistro.dirty || passwordRegistro.touched) && passwordRegistro.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(passwordRegistro.dirty || passwordRegistro.touched) && passwordRegistro.invalid">
+                    
+                    <div *ngIf="passwordRegistro.errors['required']">
+                        <p class="text-light">
+                            La contraseña es obligatoria
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group mt-2">
+                <input type="password" class="form-control" 
+                id="password2" placeholder="Repetir Contraseña" 
+                [(ngModel)]="passwordTwo"
+                > 
+            </div>
+
+            <app-button [valor]="'Sign In'"></app-button>
         </form>
 
     </div>
-            
-  
-  
+
+
+
 </div>

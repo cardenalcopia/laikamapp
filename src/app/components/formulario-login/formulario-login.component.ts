@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-formulario-login',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioLoginComponent implements OnInit {
 
-  constructor() { }
+  public usuario: Usuario;
+
+  constructor() {
+    this.usuario = new Usuario(null, null, null, null, null);
+   }
+
+   login(){
+     
+   }
 
   ngOnInit(): void {
   }

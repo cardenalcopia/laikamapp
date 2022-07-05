@@ -12,10 +12,19 @@
             LaikaMapp
         </h1>
 
-        <form id="form">
+        <form id="form" #userForm="ngForm" (ngSubmit)="login()">
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="usuario" name="usuario" 
+                placeholder="Usuario" [(ngModel)]="usuario.correo"
+                >
+            </div>
             
-            <input type="text" class="form-control" id="usuario" placeholder="Usuario">
-            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" 
+                placeholder="Contraseña" [(ngModel)]="usuario.password"
+                >
+            </div>
             
             <app-button [valor]="'Login'" ></app-button>
         </form>
