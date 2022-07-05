@@ -11,7 +11,7 @@
 .actividades{
     width: 25%;
     height: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.349);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.349); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,8 +20,8 @@
 .chat{
     width: 25%;
     height: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.349);
-    border-left: 1px solid rgba(255, 255, 255, 0.349);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.349); */
+    /* border-left: 1px solid rgba(255, 255, 255, 0.349); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,8 +30,8 @@
 .mapa{
     width: 25%;
     height: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.349);
-    border-left: 1px solid rgba(255, 255, 255, 0.349);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.349); */
+    /* border-left: 1px solid rgba(255, 255, 255, 0.349); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +40,7 @@
 .pipicanes{
     width: 25%;
     height: 100%;
-    border-left: 1px solid rgba(255, 255, 255, 0.349);
+    /* border-left: 1px solid rgba(255, 255, 255, 0.349); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,6 +49,15 @@
 .icon{
     width: 50%;
     height: 50%;
+  
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+.icon3{
+    width: 70%;
+    height: 70%;
   
     background-size: contain;
     background-repeat: no-repeat;
@@ -68,8 +77,17 @@
     align-items: center;
 }
 .icon2{
-    width: 50%;
-    height: 80%;
+    width: 85%;
+    height: 95%;
+  
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+.icon4{
+    width: 35%;
+    height: 35%;
   
     background-size: contain;
     background-repeat: no-repeat;
