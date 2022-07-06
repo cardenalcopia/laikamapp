@@ -12,11 +12,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { CardsPipicanesComponent } from './pages/cards-pipicanes/cards-pipicanes.component';
+import { CardsActividadesComponent } from './pages/cards-actividades/cards-actividades.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"cards-actividades",component:CardActividadesComponent},
-  {path:"cards-pipicanes",component:CardPipicanComponent},
+  {path:"cards-actividades",component:CardsActividadesComponent},
+  {path:"cards-pipicanes",component:CardsPipicanesComponent},
   {path:"chat",component:ChatComponent},
   {path:"perfil",component:PerfilComponent},
   {path:"apuntadas", component:ApuntadasComponent},

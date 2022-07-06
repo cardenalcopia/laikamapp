@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pipican } from 'src/app/models/pipican';
 
 @Component({
   selector: 'app-card-pipican',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-pipican.component.css']
 })
 export class CardPipicanComponent implements OnInit {
+  @Input() cardsPadre:Pipican;
 
   constructor() { }
 
