@@ -12,12 +12,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { ListadoChatsComponent } from './pages/listado-chats/listado-chats.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"cards-actividades",component:CardActividadesComponent},
   {path:"cards-pipicanes",component:CardPipicanComponent},
-  {path:"chat",component:ChatComponent},
+  {path:"listado-chats",component:ListadoChatsComponent},
   {path:"perfil",component:PerfilComponent},
   {path:"apuntadas", component:ApuntadasComponent},
   {path:"creadas",component:CreadasComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"contacto",component:ContactoComponent},
   {path:"about-us",component:AboutUsComponent},
   {path: "registro", component: RegistroComponent},
-  {path: "login", component: LoginComponent}
+  {path: "login", component: LoginComponent},
+  {path:"chats",component:ChatComponent}
 
 ]
 

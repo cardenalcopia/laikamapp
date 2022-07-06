@@ -1,1 +1,27 @@
-<p>listado-chats works!</p>
+
+<div class="body">
+    <div class="cabecera">
+        <h1>Mis Chats</h1>
+    </div>
+    <div class="listado">
+        <ul>
+            <li *ngFor="let nuevochat of chats">
+                <a routerLink="/chats">
+                <div class="chat"> 
+                
+                      <div class="fotocontacto">
+                        <img class="foto" src="{{nuevochat.fotocreador}}" alt="">
+                    </div>
+                    <div class="nombrechat">
+                        <label class="nombre" >{{nuevochat.titulo}}</label>
+                    </div>
+               
+                  
+                </div>
+            </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
