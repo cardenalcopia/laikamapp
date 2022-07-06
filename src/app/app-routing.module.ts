@@ -14,6 +14,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { CardsPipicanesComponent } from './pages/cards-pipicanes/cards-pipicanes.component';
 import { CardsActividadesComponent } from './pages/cards-actividades/cards-actividades.component';
+import { PipicanComponent } from './pages/pipican/pipican.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:"contacto",component:ContactoComponent},
   {path:"about-us",component:AboutUsComponent},
   {path: "registro", component: RegistroComponent},
-  {path: "login", component: LoginComponent}
+  {path: "login", component: LoginComponent},
+  {path: "pipicanCard", component:PipicanComponent}
 
 ]
 
