@@ -1,18 +1,21 @@
-<div class="padre">
-    <div class="header">Header
-    </div>
-        <!-- <div class="cards" *ngFor="let actividades of cards">  -->
-            <mat-card class="card1">
-                <!-- on-click=ir a la card nueva(pipicanes.id_pipican) -->
-                <a routerLink="" class="botonCard">
-                    <!-- <img mat-card-image src="{{pipicanes.imagen}}">
-                    <mat-card-title class="card__titulo">{{pipicanes.titulo}}</mat-card-title>
-                    <mat-card-subtitle class="card__calle"></mat-card-subtitle>
-                    <mat-card-subtitle class="card__calle">{{pipicanes.calle}}</mat-card-subtitle> -->
-                    <!-- Mirar la distancia -->
-                    <!-- <mat-card-content class="card__distancia">{{pipicanes.distancia}}</mat-card-content> -->
-                </a>
-            </mat-card>  
-        <!-- </div> -->
-    <div class="footer">footer</div>
-</div>
+<mat-card class="card1">
+    <!-- on-click=ir a la card nueva(pipicanes.id_pipican) -->
+    <a class="botonCard" routerLink="">
+        <div class="tituloPadre">
+            <img mat-card-image class="tituloImagen" src="{{cardsPadre.imagen}}">
+            <div class="tituloTexto">
+                <mat-card-title class="card__titulo">{{cardsPadre.titulo}}</mat-card-title>
+                <mat-card-subtitle class="card__titulo">creador</mat-card-subtitle>
+            </div>
+        </div>
+        <div class="imagen">
+            <img mat-card-image src="{{cardsPadre.imagen}}">
+        </div>
+        <mat-card-subtitle class="card__callee">{{cardsPadre.tipo}}</mat-card-subtitle>
+        <mat-card-content class="card__calle">📍 {{cardsPadre.localizacion}}</mat-card-content>
+        <!-- Mirar la distancia -->
+        <mat-card-content class="card__distancia">🚶 {{cardsPadre.fecha}}</mat-card-content>
+        <mat-card-content class="card__distancia">🚶 {{cardsPadre.maxPerros}}</mat-card-content>
+        <mat-card-content class="card__informacion">📲 Para más información</mat-card-content>
+    </a>
+</mat-card>  

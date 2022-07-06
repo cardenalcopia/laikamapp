@@ -1,1 +1,5 @@
-<p>cards-actividades works!</p>
+<div class="cardPadre">
+    <div class="cards" *ngFor="let actividades of cards"> 
+        <app-card-actividades [cardsPadre]="actividades"></app-card-actividades>
+    </div>
+</div>

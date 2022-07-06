@@ -1,43 +1,12 @@
-<div class="padre">
-    <div class="header">Header
-    </div>
-        <div class="card">
-            <img src="http://www.xn--grupobriceo-beb.es//CMS/Ficheros/Imagenes/20170210-104846.med.jpg" alt="Imagen">
-            <div class="card__texto">
-                <div class="card__titulo">Parque del tío Pío</div>
-                <div class="card__calle--rating">
-                    <div class="card__distancia">Distancia: 150m</div>
-                    <div class="card__rating">
-                        <!-- <span>⭐⭐⭐⭐⭐</span> -->
-                        <form>
-                            <p class="clasificacion">
-                              <input id="radio1" type="radio" name="estrellas" value="5">
-                              <label for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4">
-                              <label for="radio2">★</label>
-                              <input id="radio3" type="radio" name="estrellas" value="3">
-                              <label for="radio3">★</label>
-                              <input id="radio4" type="radio" name="estrellas" value="2">
-                              <label for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1">
-                              <label for="radio5">★</label>
-                            </p>
-                          </form>
-                        <span class="fa fa-start" style="cursor: pointer;"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="card__calle">C/Camino de valderribas s/n</div>
-            <div class="card__informacion">
-                <div class="card__datos">Datos de Interés:</div>
-                <div class="card__datos--texto">Este pipican cuenta con las siguientes partes:</div>
-            </div>
-            <div class="card__informacion--pipicanes">
-                <div class="pipicanes__cesped">+ Zona de cesped</div>
-                <div class="pipicanes__entrenamiento">+ Zona de entrenamiento: Sí</div>
-                <div class="pipicanes__fuente">+ Fuente: aún no</div>
-                <div class="pipicanes__varios">+ Información que podamos hacer</div>
-            </div>
-        </div>
-    <div class="footer">footer</div>
-</div>
+<mat-card class="card1">
+    <!-- on-click=ir a la card nueva(pipicanes.id_pipican) -->
+    <a class="botonCard" routerLink="/pipicanCard">
+        <img mat-card-image src="{{cardsPadre.imagen}}">
+        <mat-card-title class="card__titulo">{{cardsPadre.titulo}}</mat-card-title>
+        <mat-card-subtitle class="card__callee"></mat-card-subtitle>
+        <mat-card-content class="card__calle">📍 {{cardsPadre.calle}}</mat-card-content>
+        <!-- Mirar la distancia -->
+        <mat-card-content class="card__distancia">🚶 {{cardsPadre.distancia}}</mat-card-content>
+        <mat-card-content class="card__informacion">📲 Para más información</mat-card-content>
+    </a>
+</mat-card>  

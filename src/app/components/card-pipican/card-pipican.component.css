@@ -1,129 +1,25 @@
+/* Hijo */
 *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-.padre{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    height: 100vh;
-    width: 100%;
-    /* border: 10px solid red; */
+
+.card1{
+    border: 1px solid rgb(121, 4, 164, 0.81);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* text-align: center; */
 }
-.header{
-    height: 70px;
-    width: 100%;
-    border: 2px solid black;
-    color: red
-}
-.footer{
-    height: 70px;
-    width: 100%;
-    color: red;
-    border: 2px solid black
-}
-.card{
-    height: 80%;
-    /* border: 2px solid red */
-}
-/* .card1{
-    border: 2px solid whit;
-} */
-.card__texto{
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-    justify-content: space-between;
-    border-bottom: 4px solid rgb(121, 4, 164, 0.81);
-    padding-bottom: 5%;
+a{
+    text-decoration: none;
+    color: black; 
 }
 .card__titulo{
-    font-size: x-large;
-    margin-top: 7%;
-    margin-bottom: 4%;
-}
-.card__calle--rating{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2%;
-    margin-right: 2%;
-}
-.card__rating{
-    margin-top: 10%;
-}
-/* Rating abajo */
-.card__calle{
-    margin-top: 4%;
-    padding-bottom: 4%;
     text-align: center;
-    border-bottom: 2px solid #eee;
+    padding-bottom: 3%;
 }
 .card__informacion{
-    margin-left: 4%;
+    font-size: smaller;
 }
-.card__datos{
-    font-size: large;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.card__callee{
+    border-bottom: 1px solid #eee;
 }
-.card__datos--texto{
-    padding-bottom: 4%;
-    /* border: 2px solid red; */
-}
-.card__informacion--pipicanes{
-    margin-left: 4%;
-    
-}
-.pipicanes__cesped{
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-.pipicanes__entrenamiento{
-    padding-bottom: 1%;
-}
-.pipicanes__fuente{
-    padding-bottom: 1%;
-
-}
-
-/* Rating */
-#form {
-    width: 250px;
-    margin: 0 auto;
-    height: 50px;
-  }
-  
-  #form p {
-    text-align: center;
-  }
-  
-  #form label {
-    font-size: 20px;
-  }
-  
-  input[type="radio"] {
-    display: none;
-  }
-  
-  label {
-    color: grey;
-    width: 15px;
-    font-size: large;
-  }
-  
-  .clasificacion {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-  }
-  
-  label:hover,
-  label:hover ~ label {
-    color: orange;
-  }
-  
-  input[type="radio"]:checked ~ label {
-    color: orange;
-  }
