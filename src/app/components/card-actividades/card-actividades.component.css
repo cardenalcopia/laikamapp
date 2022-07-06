@@ -13,10 +13,6 @@ a{
     text-decoration: none;
     color: black; 
 }
-.card__titulo{
-    text-align: center;
-    /* padding-bottom: 3%; */
-}
 .card__informacion{
     font-size: smaller;
 }
@@ -29,4 +25,71 @@ img{
     justify-content: center;
     align-items: center; */
     border: 2px solid #eee;
+}
+
+/* Título arriba de la foto */
+.tituloPadre{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 10%;
+    /* align-items: center; */
+    margin-bottom: 5%;
+}
+.actividadImagen{
+    margin-bottom: 5%;
+}
+.tituloImagen{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.tituloTexto{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.card__creador{
+    font-size: smaller;
+}
+.imagen{
+    /* border-left: 6px solid white;
+    border-right: 6px solid white; */
+}
+
+/* Tipo y lugar, debajo de la imagen */
+
+.tipo__lugar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Fecha y plazas disponibles */
+
+.fecha__disponible{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card__fecha{
+    /* display: flex;
+    flex: column;
+    align-items: flex-start; */
+    
+}
+
+.card__disponible{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.disponible__numero{
+    font-size: xxx-large;
+    color: rgba(253, 107, 91, 1);
+}
+.texto__disponible{
+    font-size: smaller;
 }

@@ -1,21 +1,35 @@
 <mat-card class="card1">
-    <!-- on-click=ir a la card nueva(pipicanes.id_pipican) -->
-    <a class="botonCard" routerLink="">
+    <!-- on-click=ir a la card nueva(actividad.id_actividad) -->
+    <a class="botonCard" routerLink="/actividadCard">
         <div class="tituloPadre">
-            <img mat-card-image class="tituloImagen" src="{{cardsPadre.imagen}}">
+            <div class="actividadImagen">
+                <img class="tituloImagen" src="{{cardsPadre.imagen}}">
+            </div>
             <div class="tituloTexto">
-                <mat-card-title class="card__titulo">{{cardsPadre.titulo}}</mat-card-title>
-                <mat-card-subtitle class="card__titulo">creador</mat-card-subtitle>
+                <div class="card__titulo">{{cardsPadre.titulo}}</div>
+                <div class="card__creador">Creador</div>
             </div>
         </div>
         <div class="imagen">
             <img mat-card-image src="{{cardsPadre.imagen}}">
         </div>
-        <mat-card-subtitle class="card__callee">{{cardsPadre.tipo}}</mat-card-subtitle>
-        <mat-card-content class="card__calle">📍 {{cardsPadre.localizacion}}</mat-card-content>
-        <!-- Mirar la distancia -->
-        <mat-card-content class="card__distancia">🚶 {{cardsPadre.fecha}}</mat-card-content>
-        <mat-card-content class="card__distancia">🚶 {{cardsPadre.maxPerros}}</mat-card-content>
-        <mat-card-content class="card__informacion">📲 Para más información</mat-card-content>
+        <div class="tipo__lugar">
+            <mat-card-content class="card__calle">🐕‍🦺 {{cardsPadre.titulo}}</mat-card-content>
+            <mat-card-content class="card__calle">📍 {{cardsPadre.localizacion}}</mat-card-content>
+        </div>
+        <div class="fecha__disponible">
+            <div class="card__fecha">
+                <mat-card-content class="card__fecha--date">📅 {{cardsPadre.fecha}}</mat-card-content>
+                <mat-card-content class="card__informacion">📲 Para más información</mat-card-content>
+            </div>
+            <div class="card__disponible">
+                <!-- Poner aquí el número de plazas disponibles -->
+                <div class="disponible__numero">2</div>
+                <div class="texto__disponible">
+                    <div class="texto__plazas">Plazas</div>
+                    <div class="texto__plazas">Disponibles</div>
+                </div><!-- <div class="">Disponibles</div> -->
+            </div>
+        </div>
     </a>
 </mat-card>  

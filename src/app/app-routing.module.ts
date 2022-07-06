@@ -14,6 +14,7 @@ import { ListadoChatsComponent } from './pages/listado-chats/listado-chats.compo
 import { CardsPipicanesComponent } from './pages/cards-pipicanes/cards-pipicanes.component';
 import { CardsActividadesComponent } from './pages/cards-actividades/cards-actividades.component';
 import { PipicanComponent } from './pages/pipican/pipican.component';
+import { ActividadComponent } from './pages/actividad/actividad.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:"chats",component:ChatComponent},
   {path: "pipicanCard", component:PipicanComponent},
   {path:"listado-chats",component:ListadoChatsComponent},
+  {path:"actividadCard", component:ActividadComponent}
 
 ]
 
