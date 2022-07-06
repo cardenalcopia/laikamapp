@@ -8,8 +8,6 @@
 .contenedor{
     width: 100%;
     min-height: 100vh;
-    /* padding-bottom: 15%;
-    padding-top: 15%; */
     background-image: linear-gradient(to top right, #FD6B5B, rgba(121, 4, 164, 0.8));
     gap: 40px;
 
@@ -22,9 +20,7 @@
 
 .logoContainer{
     width: 100%;
-    /* height: 20%; */
     margin: 0 auto;
-    /* border: 2px solid blue; */
 
     display: flex;
     flex-direction: row;
@@ -39,9 +35,7 @@
 
 .formContainer{
     width: 90%;
-    /* height: 80%; */
-    /* border: 2px solid red; */
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +51,6 @@
     text-align: center;
     color: #fff;
     font-size: 40px;
-    /* border: 2px solid green; */
     margin-top: 10%;
     margin-bottom: 10%; 
 }
@@ -65,7 +58,6 @@
 #form{
     width: 90%;
     height: 80%;
-    /* border: 2px solid rgb(126, 209, 126); */
     
     display: flex;
     flex-direction: column;

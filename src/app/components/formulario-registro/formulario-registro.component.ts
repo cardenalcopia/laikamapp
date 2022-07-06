@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario';
 // import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-registro',
@@ -12,7 +13,7 @@ export class FormularioRegistroComponent implements OnInit {
   public usuario: Usuario;
   public passwordTwo: string;
 
-  constructor() { 
+  constructor(public router: Router) { 
     this.usuario = new Usuario(null, null, null, null, null);
   }
 
@@ -20,6 +21,15 @@ export class FormularioRegistroComponent implements OnInit {
   }
 
   registrarse(){
+
+      if(this.usuario.password == this.passwordTwo){
+
+        this.router.navigateByUrl('/login');
+
+      }
+      else{
+        console.log('Las contraseñas no coinciden');
+      }
 
   }
 

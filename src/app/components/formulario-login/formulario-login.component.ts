@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 
 @Component({
@@ -10,11 +11,17 @@ export class FormularioLoginComponent implements OnInit {
 
   public usuario: Usuario;
 
-  constructor() {
+  constructor( public router: Router ) {
     this.usuario = new Usuario(null, null, null, null, null);
    }
 
    login(){
+
+    let dataError = false;
+
+    if( dataError == false ){
+      this.router.navigateByUrl('/home');
+    }
      
    }
 
