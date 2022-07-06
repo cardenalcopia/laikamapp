@@ -1,0 +1,12 @@
+/* Padre */
+.cardPadre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}

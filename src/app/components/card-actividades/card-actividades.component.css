@@ -1,25 +1,32 @@
+/* Hijo */
 *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-.padre{
+
+.card1{
+    border: 1px solid rgba(253, 107, 91, 1);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* text-align: center; */
+}
+a{
+    text-decoration: none;
+    color: black; 
+}
+.card__titulo{
+    text-align: center;
+    /* padding-bottom: 3%; */
+}
+.card__informacion{
+    font-size: smaller;
+}
+.card__callee{
+    border-bottom: 1px solid #eee;
+}
+img{
     /* display: flex;
     flex-direction: column;
-    justify-content: space-between; */
-    height: 100vh;
-    width: 100%;
-    border: 10px solid red;
-}
-.header{
-    height: 70px;
-    width: 100%;
-    border: 2px solid black;
-    color: red
-}
-.footer{
-    height: 70px;
-    width: 100%;
-    color: red;
-    border: 2px solid black
+    justify-content: center;
+    align-items: center; */
+    border: 2px solid #eee;
 }
