@@ -2,14 +2,24 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+
 .card1{
     border: 1px solid rgb(121, 4, 164, 0.81);
     margin-top: 5%;
     margin-bottom: 5%;
-    text-align: center;
+    /* text-align: center; */
 }
 a{
     text-decoration: none;
-    color: black;
-    
+    color: black; 
+}
+.card__titulo{
+    text-align: center;
+    padding-bottom: 3%;
+}
+.card__informacion{
+    font-size: smaller;
+}
+.card__callee{
+    border-bottom: 1px solid #eee;
 }

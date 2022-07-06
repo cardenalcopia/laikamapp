@@ -3,9 +3,10 @@
     <a routerLink="" class="botonCard">
         <img mat-card-image src="{{cardsPadre.imagen}}">
         <mat-card-title class="card__titulo">{{cardsPadre.titulo}}</mat-card-title>
-        <mat-card-subtitle class="card__calle"></mat-card-subtitle>
-        <mat-card-subtitle class="card__calle">{{cardsPadre.calle}}</mat-card-subtitle>
+        <mat-card-subtitle class="card__callee"></mat-card-subtitle>
+        <mat-card-content class="card__calle">📍 {{cardsPadre.calle}}</mat-card-content>
         <!-- Mirar la distancia -->
-        <mat-card-content class="card__distancia">{{cardsPadre.distancia}}</mat-card-content>
+        <mat-card-content class="card__distancia">🚶 {{cardsPadre.distancia}}</mat-card-content>
+        <mat-card-content class="card__informacion">📲 Para más información</mat-card-content>
     </a>
 </mat-card>  
