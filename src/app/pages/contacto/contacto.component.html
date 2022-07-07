@@ -1,34 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
- <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
+
+    <div class="contenedor">
+        <!-- <div class="row"> -->
+            <!-- <div class="col"> -->
                <div class="form-container">
-                <h1>
+                <h1 class="titulo">
                     Contacto
                 </h1>
-            
-                        <form>
-                            <div class="mb-3">
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                            </div>
-                            <div class="mb-3">
-                            <input type="text" class="form-control" id="Mensaje" placeholder="Apellidos">
-                            </div>
-                            
-                             <button type="submit" class="btn btn-primary">Actualizar</button>
-                            
-                        </form>
+                <div class="form-group mt-2 w-100">
+                
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                    <div class="invalid-feedback">
+                        
+                        <div>
+                            <p>
+                                El nombre es obligatorio
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
-            </div>
-        </div>
+                <div class="input-group">
+                    <!-- <span class="input-group-text">Mensaje</span> -->
+                    <textarea class="form-control" aria-label="With textarea" id="mensaje" placeholder="Mensaje"></textarea>
+                  </div>
+               </div>
+               <button type="submit" class="btn mt-5">Enviar</button>
+            <!-- </div> -->
+        <!-- </div> -->
     </div>
-  </body>
-</html>
