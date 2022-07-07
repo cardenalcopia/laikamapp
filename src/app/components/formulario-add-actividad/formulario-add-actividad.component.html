@@ -119,8 +119,12 @@
                 
             </div>
 
+
             
-            <app-button [valor]="'Crear'"></app-button>
+            <app-button [valor]="'Crear'" *ngIf="editar == false"></app-button>
+            <app-button [valor]="'Gurdar Cambios'" *ngIf="editar == true"></app-button>
+
+
         </form>
 
     </div>

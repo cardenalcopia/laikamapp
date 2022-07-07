@@ -33,7 +33,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 
+import { ToastrModule } from 'ngx-toastr';
+
+
 import { FaqsComponent } from './pages/faqs/faqs.component';
+import { DetalleActividadComponent } from './components/detalle-actividad/detalle-actividad.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +67,8 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
     AddActividadComponent,
     MenuLateralComponent,
     PerfilComponent,
-    FaqsComponent
+    FaqsComponent,
+    DetalleActividadComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +76,8 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
     MatMenuModule,
     BrowserAnimationsModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
