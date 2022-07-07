@@ -22,7 +22,7 @@ export class FormularioRegistroComponent implements OnInit {
   }
 
   registroSuccess(){
-    this.toastr.success('Te has apuntado a esta actividad', 'En hora buena!!!');
+    this.toastr.success('Asuario creado satisfactoriamente');
   }
 
   registrarse(){
@@ -30,6 +30,8 @@ export class FormularioRegistroComponent implements OnInit {
       if(this.usuario.password == this.passwordTwo){
 
         this.router.navigateByUrl('/login');
+
+        this.registroSuccess();
 
       }
       else{
