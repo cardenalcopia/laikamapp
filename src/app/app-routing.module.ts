@@ -34,7 +34,9 @@ const routes: Routes = [
   {path: "pipicanCard", component:PipicanComponent},
   {path:"listado-chats",component:ListadoChatsComponent},
   {path: "crear", component: AddActividadComponent},
-  {path: "actividad", component: ActividadComponent}
+  {path: "actividad", component: ActividadComponent},
+  {path:"actividadCard", component:ActividadComponent},
+
 ]
 
 

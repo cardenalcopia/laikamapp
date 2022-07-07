@@ -1,8 +1,3 @@
-/* Hijo */
-*{
-    font-family: 'Roboto', sans-serif;
-}
-
 .card1{
     border: 1px solid rgba(253, 107, 91, 1);
     margin-top: 5%;
@@ -75,13 +70,6 @@ img{
     flex-direction: row;
     justify-content: space-between;
 }
-.card__fecha{
-    /* display: flex;
-    flex: column;
-    align-items: flex-start; */
-    
-}
-
 .card__disponible{
     display: flex;
     flex-direction: row;
@@ -94,4 +82,8 @@ img{
 }
 .texto__disponible{
     font-size: smaller;
+}
+#desapuntarse{
+    border: 2px solid #eee;
+    background-color: white;
 }
