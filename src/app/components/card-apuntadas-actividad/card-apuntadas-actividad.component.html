@@ -1,0 +1,51 @@
+<mat-card class="card1">
+    <!-- a para poner el enlace a la card -->
+    <!-- <a class="botonCard" routerLink=""> -->
+        <div class="tituloPadre">
+            <div class="actividadImagen">
+                <img class="tituloImagen" src="{{cardsPadre.imagen}}">
+            </div>
+            <div class="tituloTexto">
+                <div class="card__titulo">{{cardsPadre.titulo}}</div>
+                <div class="card__creador">Creador</div>
+            </div>
+        </div>
+        <div class="imagen">
+            <img mat-card-image src="{{cardsPadre.imagen}}">
+        </div>
+        <div class="tipo__lugar">
+            <mat-card-content class="card__calle">🐕‍🦺 {{cardsPadre.titulo}}</mat-card-content>
+            <mat-card-content class="card__calle">📍 {{cardsPadre.localizacion}}</mat-card-content>
+        </div>
+        <div class="fecha__disponible">
+            <div class="card__fecha">
+                <mat-card-content class="card__fecha--date">📅 {{cardsPadre.fecha}}</mat-card-content>
+                <!-- <mat-card-content class="card__informacion">📲 Para más información</mat-card-content> -->
+            </div>
+            <div class="card__desapuntarse">
+                <!-- Botón modal -->
+                <button type="button" class="btn btn-white" id="desapuntarse" data-bs-toggle="modal" data-bs-target="#exampleModal">Desapuntarse</button>
+            </div>
+        </div>
+        <!--  -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Desapuntarse de {{cardsPadre.titulo}}</h5>
+                <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                ¿Estás seguro de que deseas desapuntarte de {{cardsPadre.titulo}}?
+                </div>
+                <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-white" id="desapuntarse" data-bs-dismiss="modal">X</button> -->
+                <button type="button" class="btn btn-danger" on-click="borrar(cardsPadre.id_actividades)" data-bs-dismiss="modal" aria-label="Close">Desapuntame</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- </a> -->
+</mat-card>  
+

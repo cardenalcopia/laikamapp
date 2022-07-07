@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
@@ -32,8 +31,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
-
 import { FaqsComponent } from './pages/faqs/faqs.component';
+import { ApuntadasComponent } from './pages/apuntadas/apuntadas.component';
+import { CardApuntadasActividadComponent } from './components/card-apuntadas-actividad/card-apuntadas-actividad.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +64,9 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
     AddActividadComponent,
     MenuLateralComponent,
     PerfilComponent,
-    FaqsComponent
+    FaqsComponent,
+    ApuntadasComponent,
+    CardApuntadasActividadComponent
   ],
   imports: [
     BrowserModule,

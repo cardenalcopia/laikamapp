@@ -1,11 +1,12 @@
+<div class="boton">
+    <button type="submit" class="btn mt-3" id="botonActividad" routerLink="/addActividad">Añadir actividad</button>
+</div>
 <div class="cardPadre">
     <div class="cards" *ngFor="let actividades of cards"> 
         <app-card-actividades [cardsPadre]="actividades"></app-card-actividades>
     </div>
 </div>
-<div class="boton">
-    <button type="submit" class="btn mt-5" id="botonActividad">Añadir actividad</button>
-</div>
+
 
 
 
