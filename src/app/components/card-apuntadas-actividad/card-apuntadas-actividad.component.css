@@ -1,3 +1,6 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .card1{
     border: 1px solid rgba(253, 107, 91, 1);
     margin-top: 5%;
@@ -16,15 +19,8 @@ a{
 .card__callee{
     border-bottom: 1px solid #eee;
 }
-img{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    border: 2px solid #eee;
-}
 
-/* Título arriba de la foto */
+/* Título parte superior */
 .tituloPadre{
     display: flex;
     flex-direction: row;
@@ -47,15 +43,16 @@ img{
     /* justify-content: center; */
     /* align-items: center; */
 }
+.card__titulo{
+    font-size: large;
+    font-weight: 400;
+}
 .card__creador{
     font-size: smaller;
-}
-.imagen{
-    /* border-left: 6px solid white;
-    border-right: 6px solid white; */
+    font-weight: 400;
 }
 
-/* Tipo y lugar, debajo de la imagen */
+/* Tipo y lugar, parte inferior */
 
 .tipo__lugar{
     display: flex;
@@ -84,6 +81,6 @@ img{
     font-size: smaller;
 }
 #desapuntarse{
-    border: 2px solid #eee;
+    border: 2px solid rgba(253, 107, 91, 1);
     background-color: white;
 }

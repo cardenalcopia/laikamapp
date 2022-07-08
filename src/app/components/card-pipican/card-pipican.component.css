@@ -14,12 +14,15 @@ a{
     color: black; 
 }
 .card__titulo{
+    font-size: large;
+    font-weight: 400;
     text-align: center;
     padding-bottom: 3%;
+    border-bottom: 2px solid #eee;
 }
-.card__informacion{
+/* .card__informacion{
     font-size: smaller;
-}
+} */
 .card__callee{
-    border-bottom: 1px solid #eee;
+    border-bottom: 8px solid white;
 }

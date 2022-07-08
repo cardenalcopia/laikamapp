@@ -15,9 +15,6 @@ a{
     text-decoration: none;
     color: black; 
 }
-.card__informacion{
-    font-size: smaller;
-}
 .card__callee{
     border-bottom: 1px solid #eee;
 }
@@ -52,12 +49,13 @@ img{
     /* justify-content: center; */
     /* align-items: center; */
 }
+.card__titulo{
+    font-size: large;
+    font-weight: 400;
+}
 .card__creador{
     font-size: smaller;
-}
-.imagen{
-    /* border-left: 6px solid white;
-    border-right: 6px solid white; */
+    font-weight: 400;
 }
 
 /* Tipo y lugar, debajo de la imagen */
@@ -74,12 +72,6 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.card__fecha{
-    /* display: flex;
-    flex: column;
-    align-items: flex-start; */
-    
 }
 
 .card__disponible{

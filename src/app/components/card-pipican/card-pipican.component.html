@@ -2,8 +2,8 @@
     <!-- on-click=ir a la card nueva(pipicanes.id_pipican) -->
     <a class="botonCard" routerLink="/pipicanCard">
         <img mat-card-image src="{{cardsPadre.imagen}}">
-        <mat-card-title class="card__titulo">{{cardsPadre.titulo}}</mat-card-title>
-        <mat-card-subtitle class="card__callee"></mat-card-subtitle>
+        <div class="card__titulo">{{cardsPadre.titulo}}</div>
+        <div class="card__callee"></div>
         <mat-card-content class="card__calle">📍 {{cardsPadre.calle}}</mat-card-content>
         <!-- Mirar la distancia -->
         <mat-card-content class="card__distancia">🚶 {{cardsPadre.distancia}}</mat-card-content>
