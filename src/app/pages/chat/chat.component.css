@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+ 
+    font-family: 'Roboto', sans-serif;
+  
+
+}
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    z-index: 1;
+    top: 70px;
+    background-color:#CE5558 ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+   
+}
+.foto{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.mifoto{
+    width: 82%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+.titulo{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  
+    text-align: center;
+    font-size: x-large;
+    font-weight: 400;
+}
+h2{
+    text-align: center;
+}
+.boton{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    margin-top:70px;
+    width: 100%;
+    height: 100%;
+    
+    overflow: auto;
+    padding: 8px;
+}
+.mensaje{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   position: fixed;
+   padding-right: 4px;
+    z-index: 1;
+    bottom: 70px;
+    
+}
+.input{
+    width: 80%;
+    height: 100%; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-top: 2px;
+    
+
+}
+.botonenviar{
+    width: 20%;
+    height: 79%;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#ce5557a2 ;
+    padding-bottom: 4px;
+    border: 1px solid #CE5558 ;
+    
+   
+}
+.input2{
+    width: 100%;
+    height: 85%;
+    border: none;
+    /* background-color:#CE5558 ; */
+    background-color: white;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 1px solid #CE5558 ;
+}
+.input2::placeholder{
+    text-align: center;
+}
+.mienviar{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background-color:#ce5557a2 ;
+    
+
+    
+}
+.iconoenviar{
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.botonvolver{
+    width: 100%;
+    height: 100%;
+    border: none;
+   background-color: transparent;
+   padding-bottom: 6px;
+}
+.volver{
+    height: 90%;
+    background-size: contain;
+}
+.creador{
+    max-width: 50%;
+    min-height: 50%;
+    border-radius: 3px;
+    border:1px solid #E85D57;
+    font-size: large;
+    bottom: 20px;
+    position: absolute;
+    left: 0;
+    padding: 4px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+}
+.usuario{
+    max-width: 50%;
+    min-height: 50%;
+    border-radius: 3px;
+    border:1px solid #73278F;
+  right:  0;
+  font-size: large;
+  bottom: 20px;
+  position: absolute;
+  padding: 4px;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+.mensajenviado{
+   width: 100%;
+    min-height: 10%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    
+}
