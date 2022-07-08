@@ -35,13 +35,14 @@
 
 form
 {
-    width: 100%;
+    width: 90%;
     height: 80%;
     margin: 0 auto;
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   
 }
 
@@ -58,26 +59,17 @@ h1
 input
 {
   
-    border: 1px solid rgba(121, 4, 164, 0.81);
+  
     border-radius: 3px;
     backdrop-filter: blur(4px);
     padding-left: 1%;
     padding-right: 1%;
     height: 40px;
-    margin-bottom: 1%;
-
+    margin-bottom: 10px;
+    border: 1px solid #430038;
 }
 
-.btn
-{
-    background: #430038;
-    width: 30%;
-    height: 10%;
-    color: #fff;
-    margin: 0 auto;margin-bottom: 1%;
-   
-   
-}
+
 
 
 
