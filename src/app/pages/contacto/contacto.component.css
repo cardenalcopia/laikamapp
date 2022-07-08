@@ -47,12 +47,15 @@ input
     border: 1px solid rgba(121, 4, 164, 0.81);
     backdrop-filter: blur(4px);
     border-radius: 3px;
+    font-family: 'Lato', sans-serif;
 }
 #mensaje
 {
     border: 1px solid rgba(121, 4, 164, 0.81);
     backdrop-filter: blur(4px);
     border-radius: 3px;
+    height: 120px;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -60,20 +63,17 @@ input
 {
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
-    text-align: center;
+    margin-left:5%;
     margin-top: 10%;
     margin-bottom: 10%; 
 }
 
-.btn
-{
-    background: #430038;
-    width: 30%;
-    height: 15%;
-    margin :0 auto;
+/* .btn{
+    background: rgba(121, 4, 164, 0.8);
+    width: 200px;
+    height: 40px;
     color: #fff;
-   
-}
+} */
 
 
 

@@ -15,7 +15,10 @@
     width: 80%;
     height: 100%;
     margin:0 auto;
-    margin-top: 2%;
+    margin-top: 6%;
+   
+   
+    
   
 
 }
@@ -27,8 +30,7 @@
 
     
    
-  
-   
+
     border: 1px solid rgba(121, 4, 164, 0.81);
     border-radius: 2px;
     font-family: 'Lato';
@@ -48,7 +50,7 @@
    flex-direction: column;
    margin-top:2%;
    padding: 5%;
-   gap: 15px;
+   gap: 10px;
 }
 
 img
