@@ -1,1 +1,34 @@
-<p>chat works!</p>
+<div class="main">
+    <div class="header">
+        <div class="foto">
+            <img class="mifoto" src="../../../assets/img/usuario.png" alt="">
+        </div>
+        <div class="titulo">
+            Paseo por el parque
+        </div>
+        <div class="boton">
+            <button routerLink="/listado-chats" class="botonvolver"><img class="volver" src="../../../assets/img/volver.png" alt=""></button>
+        </div>
+    </div>
+    <div class="body">
+        <div class="mensajenviado"  *ngFor="let nuevaconversacion of conversaciones">
+            <div *ngIf="nuevaconversacion.emisor==1" class="creador">
+                        {{nuevaconversacion.mensaje}}
+                    </div>
+                    <div *ngIf="nuevaconversacion.emisor==2" class="usuario">
+                        {{nuevaconversacion.mensaje}}
+                    </div>
+        </div>
+        
+
+    </div>
+    <div class="mensaje">
+        <div class="input">
+            <input type="text"  class="input2" placeholder="Escribe tu mensaje">
+        </div>
+        <div class="botonenviar">
+            <button class="mienviar"><img class="iconoenviar" src="../../../assets/img/enviar.png" alt=""></button>
+        </div>
+
+    </div>
+</div>

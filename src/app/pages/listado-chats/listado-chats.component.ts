@@ -11,6 +11,12 @@ export class ListadoChatsComponent implements OnInit {
     new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
     new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
     new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
+    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
+    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
+    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
+    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
+    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
+    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
   ];
  
 
