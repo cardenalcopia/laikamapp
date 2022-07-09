@@ -9,7 +9,7 @@
 
 }
 .actividades{
-    width: 25%;
+    width: 30%;
     height: 100%;
     /* border-right: 1px solid rgba(255, 255, 255, 0.349); */
     display: flex;
@@ -18,7 +18,7 @@
     align-items: center;
 }
 .chat{
-    width: 25%;
+    width: 30%;
     height: 100%;
     /* border-right: 1px solid rgba(255, 255, 255, 0.349); */
     /* border-left: 1px solid rgba(255, 255, 255, 0.349); */
@@ -28,7 +28,7 @@
     align-items: center;
 }
 .mapa{
-    width: 25%;
+    width: 30%;
     height: 100%;
     /* border-right: 1px solid rgba(255, 255, 255, 0.349); */
     /* border-left: 1px solid rgba(255, 255, 255, 0.349); */
@@ -38,7 +38,7 @@
     align-items: center;
 }
 .pipicanes{
-    width: 25%;
+    width: 30%;
     height: 100%;
     /* border-left: 1px solid rgba(255, 255, 255, 0.349); */
     display: flex;
