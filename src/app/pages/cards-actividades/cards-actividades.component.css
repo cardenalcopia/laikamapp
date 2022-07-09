@@ -1,11 +1,14 @@
 /* Padre */
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .cardPadre{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -1;
-    margin-top: 15%;
+    /* z-index: -1; */
+    /* margin-top: 5%; */
 }
 .cards{
     display: flex;
@@ -13,21 +16,52 @@
     width: 80%;
     
 }
-#botonActividad{
-        background: rgba(121, 4, 164, 0.8);
-        width: 80%;
-        height: 40px;
-        color: #fff;
-        
-}
 .boton{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    /* z-index: 1; */
+    /* position: fixed; */
+    /* width: 100%; */
+    /* top:10%; */
+    /* bottom: 80px; */
+    /* height: 100px; */
+    margin-top: 5%;
+}
+#botonActividad{
+    background: rgba(121, 4, 164, 0.8);
+    width: 40%;
+    height: 40px;
+    color: #fff; 
+    /* border-radius: 0; */
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    /* border-bottom-right-radius: 3%;
+    border-top-right-radius: 3%; */
+    
+}
+/* .buscar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     position: fixed;
     width: 100%;
-    top:10%;
-    /* bottom: 80px; */
-    /* height: 100px; */
+    text-align: center;
+} */
+select{
+    background: rgba(121, 4, 164, 0.8);
+    width: 40%;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    /* border-radius: 0; */
+    /* border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%; */
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+option{
+    color: #fff;
 }
