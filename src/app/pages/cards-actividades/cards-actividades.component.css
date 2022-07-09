@@ -1,4 +1,7 @@
 /* Padre */
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .cardPadre{
     display: flex;
     flex-direction: column;
