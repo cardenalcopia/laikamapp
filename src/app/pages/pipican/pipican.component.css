@@ -1,7 +1,8 @@
 *{
-    margin: 0;
+    /* margin: 0;
     padding:0;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+    font-family: 'Roboto', sans-serif;
 }
 .card{
     height: 100vh;
@@ -24,7 +25,8 @@
     margin-bottom: 3%; */
 }
 .card__titulo{
-    font-size: x-large;
+    font-size: large;
+    font-weight: 400;
     height: 10%;
     /* margin-top: 7%; */
     margin-bottom: 4%;
@@ -33,21 +35,16 @@
     top: 20%;
 
 }
-.card__calle--rating{
+/* .card__calle--rating{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    /* padding: 5% 5% 0% 0%; */
-    /* margin-top: 2%;
-    margin-right: 2%; */
-}
-.card__distancia{
-    position: absolute;
-    right: 5%;
-    top: 20%;
+    align-items: space-between;
+    padding: 5% 5% 0% 0%; 
+    margin-top: 2%;
+    margin-right: 2%;
 
-}
+} */
 .card__rating{
     position: absolute;
     right: 5%;
@@ -68,7 +65,8 @@
     margin-left: 4%;
 }
 .card__datos{
-    font-size: large;
+    /* font-size: large; */
+    font-weight: 400;
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -80,6 +78,10 @@
     margin-left: 4%;
     
 }
+/* .pipicanes__distancia{
+    padding-top: 1%;
+    padding-bottom: 1%;
+} */
 .pipicanes__cesped{
     padding-top: 1%;
     padding-bottom: 1%;
