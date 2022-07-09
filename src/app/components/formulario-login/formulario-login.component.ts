@@ -15,6 +15,10 @@ export class FormularioLoginComponent implements OnInit {
     this.usuario = new Usuario(null, null, null, null, null);
    }
 
+   registro(){
+     this.router.navigateByUrl('/registro');
+   }
+
    login(){
 
     let dataError = false;

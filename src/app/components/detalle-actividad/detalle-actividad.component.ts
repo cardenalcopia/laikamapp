@@ -19,7 +19,7 @@ export class DetalleActividadComponent implements OnInit {
   }
 
   showSuccess(){
-    this.toastr.success('Te has apuntado a esta actividad', 'En hora buena!!!');
+    this.toastr.success('Te has apuntado a esta actividad', 'Enhorabuena!!!');
   }
 
   apuntadas(){

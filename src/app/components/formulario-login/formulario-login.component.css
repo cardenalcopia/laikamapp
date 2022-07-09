@@ -7,9 +7,9 @@
 
 .contenedor{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-image: linear-gradient(to top right, #FD6B5B, rgba(121, 4, 164, 0.8));
-    gap: 40px;
+    gap: 10px;
 
     display: flex;
     flex-direction: column;
@@ -51,8 +51,8 @@
     text-align: center;
     color: #fff;
     font-size: 40px;
-    margin-top: 10%;
-    margin-bottom: 10%; 
+    margin-top: 8%;
+    margin-bottom: 8%; 
 }
 
 #form{
@@ -73,6 +73,33 @@ input[type=password] {
 
     border: 1px solid #430038;
     margin-bottom: 10px;
+}
+
+.text{
+    margin-top: 2%;
+    font-size: 15px;
+}
+
+.text p{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.text a{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    color: #430038;
+    text-decoration: none;
+}
+
+.purple{
+
 }
 
 

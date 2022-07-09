@@ -23,13 +23,18 @@
             </div>
 
             <div class="form-group mt-2 w-100">
-                
-                <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo"
-                [(ngModel)]="actividad.tipo" #tipoCrear="ngModel"
-                [ngClass]="{'is-invalid': (tipoCrear.dirty || tipoCrear.touched) && tipoCrear.invalid }"
-                required
+                <select class="form-select" aria-label="Default select example"
+                [(ngModel)]="actividad.tipo"
+                name="opcion"
+                #tipoCrear="ngModel"
                 >
-                <div class="invalid-feedback" *ngIf="(tipoCrear.dirty || tipoCrear.touched) && tipoCrear.invalid">
+                    <option 
+                    *ngFor="let opcion of opciones"
+                    >
+                        {{opcion}}
+                    </option>
+                </select>
+                <!-- <div class="invalid-feedback" *ngIf="(tipoCrear.dirty || tipoCrear.touched) && tipoCrear.invalid">
                     
                     <div *ngIf="tipoCrear.errors['required']">
                         <p>
@@ -37,13 +42,13 @@
                         </p>
                     </div>
                     
-                </div>
+                </div> -->
                 
             </div>
             
             <div class="form-group mt-2 w-100">
                 
-                <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Fecha"
+                <input type="date" class="form-control" name="fecha" placeholder="Fecha"
                 [(ngModel)]="actividad.fecha" #fechaCrear="ngModel"
                 [ngClass]="{'is-invalid': (fechaCrear.dirty || fechaCrear.touched) && fechaCrear.invalid }"
                 required
@@ -59,7 +64,36 @@
                 </div>
                 
             </div>
-            
+
+            <div class="form-group mt-2 w-100">
+                
+                <input type="time" class="form-control" name="hora" placeholder="Hora"
+                [(ngModel)]="actividad.hora" #horaCrear="ngModel"
+                [ngClass]="{'is-invalid': (horaCrear.dirty || horaCrear.touched) && horaCrear.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(horaCrear.dirty || horaCrear.touched) && horaCrear.invalid">
+                    
+                    <div *ngIf="horaCrear.errors['required']">
+                        <p>
+                            La hora es obligatioria
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="input-group mt-2 w-100">
+
+                <span class="input-group-text">€</span>
+                <input type="text" class="form-control" name="precio" placeholder="Precio"
+                [(ngModel)]="actividad.precio" #fechaCrear="ngModel"
+                aria-label="Amount (to the nearest dollar)"
+                >              
+                <span class="input-group-text">.00</span>
+                
+            </div>
             
             <div class="form-group mt-2 w-100">
                 
@@ -101,7 +135,7 @@
 
             <div class="form-group mt-2 w-100">
                 
-                <textarea cols="30" rows="5" class="form-control" id="info" name="info" placeholder="Información..."
+                <textarea cols="30" rows="1" class="form-control" id="info" name="info" placeholder="Información..."
                 [(ngModel)]="actividad.informacion" #infoCrear="ngModel"
                 [ngClass]="{'is-invalid': (infoCrear.dirty || infoCrear.touched) && infoCrear.invalid }"
                 required

@@ -7,13 +7,13 @@
 
 .contenedor{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-image: linear-gradient(to top right, #FD6B5B, rgba(121, 4, 164, 0.8));
-    gap: 30px;
+    /* gap: 10px; */
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 
 }
@@ -31,7 +31,7 @@
 }
 
 .logoContainer img{
-    width: 15%;
+    width: 16%;
     background-color: transparent;
 }
 
@@ -41,18 +41,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    /* gap: 10px; */
     padding-bottom: 10px;
 
 }
 
 .title{
     font-family: 'Lato', sans-serif;
-    font-weight: bolder;
+    font-weight: 400;
     text-align: center;
     color: #fff;
-    margin-top: 10%;
-    margin-bottom: 10%; 
+    margin-top: 5%;
+    margin-bottom: 5%; 
 }
 
 #form{

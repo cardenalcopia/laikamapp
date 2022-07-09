@@ -1,18 +1,26 @@
 <div class="card">
 
     <div class="card__ubicacion">
+
+        <div class="card__titulo">{{ detalle.titulo | titlecase }}</div>
+        
+        <!-- <img src="{{detalle.imagen}}" alt="Imagen"> -->
+
         <div class="card__detalle">
-            <div class="card__titulo">{{ detalle.titulo | titlecase }}</div>
-            <div class="card__dierccion">{{ detalle.localizacion }}</div>
+            <div class="card__dierccion linea">📍 {{ detalle.localizacion }}</div>
+            <div class="card__distancia linea">🚶 Dist.: 150 m.</div>
+            <div class="card__hora linea">⌚ {{ detalle.hora }} Hrs.</div>
+            <div class="card__precio linea">💶 {{ detalle.precio }} €</div>
         </div>
-        <div class="card__distancia">Distancia: 150m.</div>
+
+        <div class="card__informacion">
+            <div class="card__texto">{{ detalle.informacion }} </div>
+        </div>
+        
     </div>
 
-    <img src="{{detalle.imagen}}" alt="Imagen">
     
-    <div class="card__informacion">
-        <div class="card__texto">{{ detalle.informacion }} </div>
-    </div>
+    
 
     <app-button [valor]="'Apuntarme'" (click)="apuntadas()"></app-button>
 

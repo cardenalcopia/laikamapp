@@ -15,17 +15,34 @@ export class FormularioAddActividadComponent implements OnInit {
 
   public actividad: Actividades;
 
-  public editar: boolean = true;
+  public editar: boolean = false;
+
+  public opciones: string[] = ['Ruta', 'Entrenamiento', 'Evento'];
+
+  public selected: string = this.opciones[0];
 
   constructor(public router: Router, private toastr: ToastrService) {
-    this.actividad = new Actividades(null, null,null, null, null, null, null, null);
+
+    if(this.editar == false){
+
+      this.actividad = new Actividades(null, null, null, this.selected, null, null, '0', null, null, null);
+      console.log(this.actividad);
+
+    }
+    else{
+
+      //Aquí iria la actividad a editar
+      //Se crea una nueva actividad simplemente para el ejemplo
+      this.actividad = new Actividades(null, null, 'Paseo de Perros', this.selected, new Date("2022, 07, 22"), '18:30', '10', 'C/Luna', 7, 'Los que quieran ir');
+
+    }
    }
 
   ngOnInit(): void {
   }
 
   crearSuccess(){
-    this.toastr.success('Has creado una actividad', 'En huella buena!!!');
+    this.toastr.success('Has creado una actividad', 'Enhorabuena!!!');
   }
 
   editarSuccess(){
