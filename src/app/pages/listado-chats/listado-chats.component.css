@@ -20,7 +20,7 @@ font-family: 'Roboto', sans-serif;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
+    padding-top: 12px;
 }
 .listado{
     display: flex;
@@ -40,20 +40,22 @@ font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 70px;
     padding: 4px;
+    border-bottom:2px solid #ffff;
     
  
 }
 .fotocontacto{
-    width: 30%;
+    width: 20%;
     height: 100%;
     border-radius: 10px;
-    padding: 5px;
- 
+    padding-left: 5px;
+    padding-top: 12px;
+
    
 }
 .foto{
-    width: 70%;
-    height: 100%;
+    width: 65%;
+    height: 80%;
    
 }
 ul{
@@ -62,15 +64,19 @@ ul{
 .nombrechat{
     width: 70%;
     height: 100;
-    font-size: x-large;
+    font-size: large;
     color:black;
-    padding: 8px;
-    border-bottom:1px solid #ffff;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 .nombre{
+    width: 100%;
+    height: 100%;
     text-align:start;
+    padding-top: 18px;
+    font-family: 'Roboto', sans-serif;
 }
 a{
     text-decoration: none;

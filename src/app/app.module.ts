@@ -36,7 +36,7 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
 import { DetalleActividadComponent } from './components/detalle-actividad/detalle-actividad.component';
 import { ApuntadasComponent } from './pages/apuntadas/apuntadas.component';
 import { CardApuntadasActividadComponent } from './components/card-apuntadas-actividad/card-apuntadas-actividad.component';
-
+import {ContactoComponent} from './pages/contacto/contacto.component'
 
 @NgModule({
   declarations: [
@@ -69,7 +69,8 @@ import { CardApuntadasActividadComponent } from './components/card-apuntadas-act
     FaqsComponent,
     DetalleActividadComponent,
     ApuntadasComponent,
-    CardApuntadasActividadComponent
+    CardApuntadasActividadComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
