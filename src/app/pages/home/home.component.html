@@ -1,6 +1,16 @@
 <div class="mapa__hijo">
     <div class="mapa__hijo--mapa">
-        <img class="imagenMapa" src="https://storage.googleapis.com/support-forums-api/attachment/thread-21950169-15070763766771596119.png" alt="Mapa">
+
+        <app-loading-mapa *ngIf="!isUserLocationReady; else mapReady"></app-loading-mapa>
+            
+        
+        <ng-template #mapReady>
+            <app-mapa></app-mapa> 
+
+            <app-btn-my-location></app-btn-my-location>
+        </ng-template>
+        
+        <!-- <img class="imagenMapa" src="https://storage.googleapis.com/support-forums-api/attachment/thread-21950169-15070763766771596119.png" alt="Mapa"> -->
     </div>
     <div class="mapa__hijo--buscador">
         <input type="text" class="form-control" id="inputBuscar" placeholder="Buscar...">
