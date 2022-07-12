@@ -1,6 +1,11 @@
-<!-- <ng-container class="contenedor"> -->
+<div class="cardPadre">
+    <div class="cards" *ngFor="let cardsPadre of cards">
+        <app-card-creadas-actividad [cardsPadre]="cardsPadre"></app-card-creadas-actividad>  
+    </div>
+</div>
+<!-- <ng-container class="contenedor">
     
-      <!-- <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;">
         <div class="titulo">
                 <div class="logo">
                     <img class="icono" src="../../../assets/img/usuario.png" alt="">
@@ -20,11 +25,11 @@
           <p class="fecha">12/06/2022</p>
           <a href="#" class="btn btn-primary">Editar actividad</a>
         </div>
-      </div> -->
-      <!-- <mat-card class="card1"> -->
-        <!-- on-click=ir a la card nueva(actividad.id_actividad) -->
-        <!-- <a class="botonCard" routerLink="/actividadCard"> -->
-            <!-- <div class="tituloPadre">
+      </div> 
+      <!-- <mat-card class="card1"> 
+        on-click=ir a la card nueva(actividad.id_actividad)
+        <a class="botonCard" routerLink="/actividadCard">
+           <div class="tituloPadre">
                 <div class="actividadImagen">
                     <img class="tituloImagen" src="{{cardsPadre.imagen}}">
                 </div>
@@ -46,16 +51,15 @@
                     <mat-card-content class="card__informacion">📲 Para más información</mat-card-content>
                 </div>
                 <div class="card__disponible">
-                    <!-- Poner aquí el número de plazas disponibles -->
-                    <!-- <div class="disponible__numero">2</div>
+              
+                   <div class="disponible__numero">2</div>
                     <div class="texto__disponible">
                         <div class="texto__plazas">Plazas</div>
                         <div class="texto__plazas">Disponibles</div>
-                    </div><!-- <div class="">Disponibles</div> -->
-                <!-- </div>
+                     </div><div class="">Disponibles</div> 
+                </div> 
             </div>
         </a>
-    </mat-card>   --> --> -->
+    </mat-card>   -->
    
-<!-- </ng-container> -->
-
+<!-- </ng-container>  -->

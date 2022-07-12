@@ -1,0 +1,87 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.card1{
+    border: 1px solid rgba(253, 107, 91, 1);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* box-shadow: 5px 5px 5px rgba(253, 107, 91, 0.5); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* text-align: center; */
+}
+a{
+    text-decoration: none;
+    color: black; 
+}
+.card__informacion{
+    font-size: smaller;
+}
+.card__callee{
+    border-bottom: 1px solid #eee;
+}
+
+/* Título parte superior */
+.tituloPadre{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 10%;
+    /* align-items: center; */
+    margin-bottom: 5%;
+}
+.actividadImagen{
+    margin-bottom: 5%;
+}
+.tituloImagen{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.tituloTexto{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.card__titulo{
+    font-size: large;
+    font-weight: 400;
+}
+.card__creador{
+    font-size: smaller;
+    font-weight: 400;
+}
+
+/* Tipo y lugar, parte inferior */
+
+.tipo__lugar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Fecha y plazas disponibles */
+
+.fecha__disponible{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card__disponible{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.disponible__numero{
+    font-size: xxx-large;
+    color: rgba(253, 107, 91, 1);
+}
+.texto__disponible{
+    font-size: smaller;
+}
+#desapuntarse{
+    border: 2px solid white;
+    background-color: rgba(253, 107, 91, 1);
+    color:white;
+}

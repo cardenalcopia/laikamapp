@@ -44,6 +44,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { HttpClientModule } from "@angular/common/http";
+import { CardCreadasActividadComponent } from './components/card-creadas-actividad/card-creadas-actividad.component';
+import { CreadasComponent } from './pages/creadas/creadas.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +82,9 @@ import { HttpClientModule } from "@angular/common/http";
     ContactoComponent,
     MapaComponent,
     LoadingMapaComponent,
-    BtnMyLocationComponent
+    BtnMyLocationComponent,
+    CardCreadasActividadComponent,
+    CreadasComponent
   ],
   imports: [
     BrowserModule,

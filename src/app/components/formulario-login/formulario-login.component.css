@@ -26,6 +26,16 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein{
+    from {
+        margin-right: 100%;
+    }
+    to {
+        margin-right: 50%;
+    }
 }
 
 .logoContainer img{
