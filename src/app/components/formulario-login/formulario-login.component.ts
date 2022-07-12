@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-formulario-login',
@@ -11,7 +12,7 @@ export class FormularioLoginComponent implements OnInit {
 
   public usuario: Usuario;
 
-  constructor( public router: Router ) {
+  constructor(public apiService:UsuarioService, public router: Router ) {
     this.usuario = new Usuario(null, null, null, null, null);
    }
 
@@ -21,11 +22,21 @@ export class FormularioLoginComponent implements OnInit {
 
    login(){
 
-    let dataError = false;
-
-    if( dataError == false ){
-      this.router.navigateByUrl('/home');
-    }
+    let inicioSesion = new Usuario (null, null, this.usuario.correo, null, this.usuario.password)
+    this.apiService.login(inicioSesion).subscribe((data:any) => 
+    {
+      this.apiService.usuario = data.result[0];
+      
+      if(data.error == false){
+        this.apiService.logueado = true;
+        this.router.navigateByUrl('/home')
+        console.log("apiService con data error false");
+        console.log(this.apiService);
+        
+      }
+      
+    })
+    console.log("Inicio Sesión correcto o");
      
    }
 
