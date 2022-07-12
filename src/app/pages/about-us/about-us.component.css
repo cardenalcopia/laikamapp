@@ -15,7 +15,11 @@
     width: 80%;
     height: 100%;
     margin:0 auto;
-    margin-top: 2%;
+  
+   
+   
+   
+    
   
 
 }
@@ -27,8 +31,7 @@
 
     
    
-  
-   
+    margin-top: 10%;
     border: 1px solid rgba(121, 4, 164, 0.81);
     border-radius: 2px;
     font-family: 'Lato';
@@ -47,8 +50,8 @@
    display: flex;
    flex-direction: column;
    margin-top:2%;
-   padding: 5%;
-   gap: 15px;
+   padding: 3%;
+   gap: 8px;
 }
 
 img
@@ -61,7 +64,10 @@ img
 {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    /* margin-right:2% ;
+     */
+    margin-top: 2%; 
+    margin-bottom: 2%;
    
   
 }
@@ -71,13 +77,14 @@ img
     display: flex;
     flex-direction: column;
     margin-top:3%;
-    padding: 5%;
+    padding: 1%;
+    
    
 }
 
 h4
 {
-    margin-top: 5%;
+    margin-top: 6%;
     margin-bottom: 1%;
 }
 
@@ -89,6 +96,6 @@ p
 #perro
 {
     
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
