@@ -1,0 +1,11 @@
+button{
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    z-index: 999;
+    /* color: #fff; */
+}
+
+.mat-mini-fab.mat-primary{
+    background-color: #fd6b5b;
+}

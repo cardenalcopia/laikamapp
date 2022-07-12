@@ -36,7 +36,14 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
 import { DetalleActividadComponent } from './components/detalle-actividad/detalle-actividad.component';
 import { ApuntadasComponent } from './pages/apuntadas/apuntadas.component';
 import { CardApuntadasActividadComponent } from './components/card-apuntadas-actividad/card-apuntadas-actividad.component';
-import {ContactoComponent} from './pages/contacto/contacto.component'
+import {ContactoComponent} from './pages/contacto/contacto.component';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { LoadingMapaComponent } from './components/loading-mapa/loading-mapa.component';
+import { BtnMyLocationComponent } from './components/btn-my-location/btn-my-location.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -70,7 +77,10 @@ import {ContactoComponent} from './pages/contacto/contacto.component'
     DetalleActividadComponent,
     ApuntadasComponent,
     CardApuntadasActividadComponent,
-    ContactoComponent
+    ContactoComponent,
+    MapaComponent,
+    LoadingMapaComponent,
+    BtnMyLocationComponent
   ],
   imports: [
     BrowserModule,
@@ -80,6 +90,9 @@ import {ContactoComponent} from './pages/contacto/contacto.component'
     MatCardModule,
     FormsModule,
     ToastrModule.forRoot(),
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
