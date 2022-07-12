@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Map, Popup, Marker } from 'mapbox-gl';
 import { PlacesService, MapService } from '../../services';
+import { Pipican } from '../../models/pipican';
 
 
 
@@ -41,7 +42,15 @@ export class MapaComponent implements AfterViewInit {
       .setPopup( popup )
       .addTo( map )
 
+    // new Marker()
+    // .setLngLat([-3.4744476, 40.399487])
+    // .addTo( map )
+    
     this.mapService.setMap( map );
+
+    
+
+    this.mapService.createMarkers( [new Pipican(2, 'dsjfklasj', 'sakdf', 'dsfkfas', 'dfks')] );
 
   }
 

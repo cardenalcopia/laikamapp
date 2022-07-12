@@ -43,6 +43,8 @@ import { BtnMyLocationComponent } from './components/btn-my-location/btn-my-loca
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import { HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,6 +92,7 @@ import { MatIconModule } from '@angular/material/icon';
     ToastrModule.forRoot(),
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
