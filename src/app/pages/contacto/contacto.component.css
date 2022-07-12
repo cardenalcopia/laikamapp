@@ -47,7 +47,7 @@ input
     border: 1px solid rgba(121, 4, 164, 0.81);
     backdrop-filter: blur(4px);
     border-radius: 3px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 #mensaje
 {
@@ -55,15 +55,17 @@ input
     backdrop-filter: blur(4px);
     border-radius: 3px;
     height: 120px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1%;
 }
+
 
 
 .titulo
 {
-    font-family: 'Lato', sans-serif;
-    font-weight: bolder;
-    margin-left:5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: larger;
+    margin-left:2%;
     margin-top: 10%;
     margin-bottom: 10%; 
 }
