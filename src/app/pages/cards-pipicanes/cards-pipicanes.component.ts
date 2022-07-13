@@ -15,6 +15,7 @@ export class CardsPipicanesComponent implements OnInit {
   //   new Pipican(2, "https://www.deperrus.com/media/k2/items/cache/fd8b0f77d767f1f6640afba6916ff67c_XL.jpg", "Parque", "C/del parque", "250m"),
   //   new Pipican(3, "https://estaticos-cdn.prensaiberica.es/clip/4ba759e9-621b-483d-a4fc-26781b20cd86_16-9-aspect-ratio_default_0.jpg", "Pipican", "C/del pipican", "300m"),
     ]
+
   constructor(public pipicanService:PipicanService, public router: Router) { }
 
   public getPipicanes(){
@@ -24,6 +25,8 @@ export class CardsPipicanesComponent implements OnInit {
     return this.cards
   })
 }
+
+
 
   ngOnInit(): void {
     this.getPipicanes()
