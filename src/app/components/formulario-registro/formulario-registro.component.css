@@ -76,6 +76,11 @@ input[type=number]{
     margin-bottom: 10px;
     border: 1px solid #430038;
 }
-
+.btn{
+    background: rgba(121, 4, 164, 0.8);
+    width: 200px;
+    height: 40px;
+    color: #fff;
+}
 
 
