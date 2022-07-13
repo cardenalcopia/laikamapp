@@ -18,6 +18,7 @@ import { AddActividadComponent } from './pages/add-actividad/add-actividad.compo
 import { ActividadComponent } from './pages/actividad/actividad.component';
 
 const routes: Routes = [
+  {path: "", component: LoginComponent},
   {path:"home",component:HomeComponent},
   {path:"cards-actividades",component:CardsActividadesComponent},
   {path:"cards-pipicanes",component:CardsPipicanesComponent},
