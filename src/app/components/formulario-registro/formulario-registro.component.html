@@ -74,7 +74,7 @@
             <div class="form-group mt-2 w-100">
                 
                 <input type="number" class="form-control" id="nPerros" name="nPerros" placeholder="Nº de Perros"
-                [(ngModel)]="usuario.nPerros" #perrosRegistro="ngModel"
+                [(ngModel)]="usuario.num_perros" #perrosRegistro="ngModel"
                 [ngClass]="{'is-invalid': (perrosRegistro.dirty || perrosRegistro.touched) && perrosRegistro.invalid }"
                 required
                 >
@@ -112,13 +112,13 @@
             <div class="form-group mt-2 w-100">
                 <input type="password" class="form-control" name="passwordTwo" 
                 id="passwordTwo" placeholder="Repetir Contraseña" 
-                [(ngModel)]="passwordTwo"
+                [(ngModel)]="repetirPassword"
                 required
                 > 
             </div> 
 
-            
-            <app-button [valor]="'Sign In'"></app-button>
+            <!-- [disabled]="userForm.invalid" -->
+            <button type="submit" class="btn mt-4" [disabled]="userForm.invalid">Sign In</button>
         </form>
 
     </div>

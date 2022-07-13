@@ -1,12 +1,12 @@
 <div class="main">
-    <div class="header">
+    <div class="header" *ngIf="usuarioService.logueado === true">
       <app-header></app-header>
     </div>
   
     <div class="body">
       <router-outlet></router-outlet>
     </div>
-  <div class="nav">
+  <div class="nav" *ngIf="usuarioService.logueado === true">
     <app-nav></app-nav>
   </div>
 

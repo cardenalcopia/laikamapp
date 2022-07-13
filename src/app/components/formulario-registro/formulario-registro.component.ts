@@ -3,6 +3,7 @@ import { Usuario } from 'src/app/models/usuario';
 // import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-formulario-registro',
@@ -12,9 +13,10 @@ import { ToastrService } from 'ngx-toastr';
 export class FormularioRegistroComponent implements OnInit {
 
   public usuario: Usuario;
-  public passwordTwo: string;
+  public repetirPassword:string;
+  public coinciden:Boolean = true;
 
-  constructor(public router: Router, private toastr: ToastrService) { 
+  constructor(public apiService:UsuarioService, public router: Router, private toastr: ToastrService) { 
     this.usuario = new Usuario(null, null, null, null, null);
   }
 
@@ -26,18 +28,35 @@ export class FormularioRegistroComponent implements OnInit {
   }
 
   registrarse(){
-
-      if(this.usuario.password == this.passwordTwo){
-
-        this.router.navigateByUrl('/login');
-
-        this.registroSuccess();
-
-      }
-      else{
-        console.log('Las contraseñas no coinciden');
-      }
-
+    if(this.usuario.password == this.repetirPassword){
+      let usuarioNuevo = new Usuario(this.usuario.nombre, this.usuario.apellidos, this.usuario.correo, this.usuario.num_perros, this.usuario.password)
+      this.apiService.register(usuarioNuevo).subscribe((data:Usuario[]) =>
+      {
+        console.log(data);
+        
+      })
+      
+      console.log("Usuario Registrado");
+      this.coinciden = true
+      this.router.navigateByUrl('/login');
+      this.registroSuccess()
+  }else{
+    console.log("Las contraseñas no coincicen");
+    this.coinciden = false
   }
+}
+
+  //     if(this.usuario.password == this.passwordTwo){
+
+  //       this.router.navigateByUrl('/login');
+
+  //       this.registroSuccess();
+
+  //     }
+  //     else{
+  //       console.log('Las contraseñas no coinciden');
+  //     }
+
+  // }
 
 }
