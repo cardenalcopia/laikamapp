@@ -1,14 +1,14 @@
 <div class="boton">
-    <select name="tipo" id="tipo" class="btn">
+    <select name="tipo" id="tipo" class="btn" #select  (change)="mostrar(select.value)">
         <!-- <option selected>Buscar</option> -->
-        <option value="ruta">Ruta</option>
-        <option value="entrenamiento">Entrenamiento</option>
-        <option value="evento">Evento</option>
+        <option value="ruta" >Ruta</option>
+        <option value="entrenamiento"  >Entrenamiento</option>
+        <option value="evento" >Evento</option>
     </select>
     <button type="submit" class="btn" id="botonActividad" routerLink="/crear">Añadir actividad</button>
 </div>
 <div class="cardPadre">
-    <div class="cards" *ngFor="let actividades of cards"> 
+    <div class="cards" *ngFor="let actividades of muestra"> 
         <app-card-actividades [cardsPadre]="actividades"></app-card-actividades>
     </div>
 </div>
