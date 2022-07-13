@@ -45,11 +45,17 @@ export class PlacesService {
 
   }
 
-  getPipicanes():Observable<Object>{//
+  getPipicanes():Observable<Object>{
 
     //dentro del get iría el endpoint para obtener lo todos los pipicanes
 
     return this.http.get(this.url);
+
+  }
+
+  getDistancia( start: [number, number], end: [number, number] ):Observable<Object>{
+
+    return this.http.get(`https://api.mapbox.com/directions/v5/mapbox/walking/${start.join(',')};${end.join(',')}?alternatives=false&continue_straight=true&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYW5kcmVzLTI5IiwiYSI6ImNsMjJ6enZiMDA0NzQzanFrN3Z4c3RxejQifQ.dlmE5vkLBhkHDfIokDpSPA`)
 
   }
 

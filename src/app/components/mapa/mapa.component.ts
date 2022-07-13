@@ -52,6 +52,17 @@ export class MapaComponent implements AfterViewInit {
 
     this.mapService.createMarkers( [new Pipican(2, 'dsjfklasj', 'sakdf', 'dsfkfas', 'dfks')] );
 
+
+    //Codigo para obtener la distancia
+
+    const start = this.placesService.userLocation!;
+    const end   = [-3.4744476, 40.399487] as [number, number];
+
+    this.placesService.getDistancia(start, end)
+      .subscribe( data => {
+        console.log( 'kms: ' + data['routes'][0]['distance']/1000 );
+      })
+
   }
 
   
