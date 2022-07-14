@@ -2,7 +2,7 @@
 
     <div class="formContainer row">
 
-        <form id="form"  #userForm="ngForm" (ngSubmit)="crear()">
+        <form id="form"  #userForm="ngForm" (ngSubmit)="addActiv()">
 
              <div class="form-group mt-2 w-100">
                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" 
@@ -117,7 +117,7 @@
             <div class="form-group mt-2 w-100">
                 
                 <input type="number" class="form-control" id="maxPerros" name="maxPerros" placeholder="Max. Perros"
-                [(ngModel)]="actividad.maxPerros" #perrosCrear="ngModel"
+                [(ngModel)]="actividad.maxperros" #perrosCrear="ngModel"
                 [ngClass]="{'is-invalid': (perrosCrear.dirty || perrosCrear.touched) && perrosCrear.invalid }"
                 required
                 >
@@ -155,7 +155,7 @@
 
 
             
-            <app-button [valor]="'Crear'" *ngIf="editar == false"></app-button>
+            <app-button [valor]="'Crear'" *ngIf="editar == false" ></app-button>
             <app-button [valor]="'Gurdar Cambios'" *ngIf="editar == true"></app-button>
 
 

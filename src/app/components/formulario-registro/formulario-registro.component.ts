@@ -17,7 +17,7 @@ export class FormularioRegistroComponent implements OnInit {
   public coinciden:Boolean = true;
 
   constructor(public apiService:UsuarioService, public router: Router, private toastr: ToastrService) { 
-    this.usuario = new Usuario(null, null, null, null, null);
+    this.usuario = new Usuario(null,null, null, null, null, null);
   }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class FormularioRegistroComponent implements OnInit {
 
   registrarse(){
     if(this.usuario.password == this.repetirPassword){
-      let usuarioNuevo = new Usuario(this.usuario.nombre, this.usuario.apellidos, this.usuario.correo, this.usuario.num_perros, this.usuario.password)
+      let usuarioNuevo = new Usuario(null,this.usuario.nombre, this.usuario.apellidos, this.usuario.correo, this.usuario.num_perros, this.usuario.password)
       this.apiService.register(usuarioNuevo).subscribe((data:Usuario[]) =>
       {
         console.log(data);

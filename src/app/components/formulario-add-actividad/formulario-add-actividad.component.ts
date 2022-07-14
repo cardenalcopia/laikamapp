@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Actividades } from '../../models/actividades';
 import { Router } from '@angular/router';
-
+import { ActividadesService } from 'src/app/services/actividades.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -21,11 +22,11 @@ export class FormularioAddActividadComponent implements OnInit {
 
   public selected: string = this.opciones[0];
 
-  constructor(public router: Router, private toastr: ToastrService) {
+  constructor(public router: Router, private toastr: ToastrService, public actividadService :ActividadesService, public userService :UsuarioService) {
 
     if(this.editar == false){
 
-      this.actividad = new Actividades(null, null, null, this.selected, null, null, '0', null, null, null);
+      this.actividad = new Actividades(null, null, null, this.selected, null, null, '0', null, null, null,null);
       console.log(this.actividad);
 
     }
@@ -33,9 +34,16 @@ export class FormularioAddActividadComponent implements OnInit {
 
       //Aquí iria la actividad a editar
       //Se crea una nueva actividad simplemente para el ejemplo
-      this.actividad = new Actividades(null, null, 'Paseo de Perros', this.selected, new Date("2022, 07, 22"), '18:30', '10', 'C/Luna', 7, 'Los que quieran ir');
+      this.actividad = new Actividades(null, null, 'Paseo de Perros', this.selected, new Date("2022, 07, 22"), '18:30', '10', 'C/Luna', 7, 'Los que quieran ir',null);
 
     }
+   }
+   addActiv()
+   {
+   this.actividad.id_usuario= this.userService.usuario1.id_usuario
+      this.actividadService.addActividad(this.actividad).subscribe((data)=>{
+        console.log(data)
+      })
    }
 
   ngOnInit(): void {

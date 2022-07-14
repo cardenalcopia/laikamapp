@@ -8,7 +8,7 @@ import { Usuario } from '../models/usuario';
 export class UsuarioService {
   private url:string = "http://localhost:3000/";
   public logueado:boolean = false;
-  public usuario:Usuario;
+  public usuario1:Usuario;
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class UsuarioService {
   login(usuario:Usuario){
 
     console.log(usuario);
-    
+    this.usuario1=usuario;
     return this.http.post(this.url + "login", usuario)
   }
 
