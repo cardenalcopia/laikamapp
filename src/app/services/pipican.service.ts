@@ -6,7 +6,7 @@ import { Pipican } from '../models/pipican';
   providedIn: 'root'
 })
 export class PipicanService {
-  public pipicanes:Pipican;
+  public pipicanInfo:Pipican;
   private url:string = "http://localhost:3000/";
   
 
@@ -17,5 +17,8 @@ export class PipicanService {
     return this.http.get(this.url+"cards-pipicanes");
   }
 
+  getCardPipi(id_pipican:number){
+    return this.http.get(this.url+"pipicanCard?id_pipican="+id_pipican);
+  }
 
 }
