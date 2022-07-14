@@ -31,7 +31,7 @@ export class MapService {
 
   createMarkers( pipicanes: Pipican[] ){
 
-    if( !this.map ) throw Error( 'Mapa no icializado' );
+    if( !this.map ) throw Error( 'Mapa no inicializado' );
 
     this.markers.forEach( marker => marker.remove() );
 
@@ -41,13 +41,13 @@ export class MapService {
 
       //revisar codigo de abajo para poner el nombre real de la propiedad del pipica tanto long como lat
 
-      // const[long, lat] = pipican;
+      const longitud = Number(pipican.longitud);
 
-      console.log( pipican );
+      const latitud = Number(pipican.latitud);
 
       const newMarker = new Marker()
-        .setLngLat([-3.744693, 40.399487])
-        //.setLngLat([long, lat])
+        // .setLngLat([-3.744693, 40.399487])
+        .setLngLat([longitud, latitud])
         .addTo( this.map )
 
       newMarkers.push( newMarker );

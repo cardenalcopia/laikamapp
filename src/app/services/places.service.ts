@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class PlacesService {
 
-  public url : string = "http://localhost:3000";
+  public url : string = "http://localhost:3000/home";
+
+  
 
   public userLocation?: [number, number];
 
