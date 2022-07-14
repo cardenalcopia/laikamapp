@@ -13,7 +13,7 @@ export class FormularioLoginComponent implements OnInit {
   public usuario: Usuario;
 
   constructor(public apiService:UsuarioService, public router: Router ) {
-    this.usuario = new Usuario(null, null, null, null, null);
+    this.usuario = new Usuario(null, null, null, null, null, null);
    }
 
    registro(){
@@ -22,10 +22,10 @@ export class FormularioLoginComponent implements OnInit {
 
    login(){
 
-    let inicioSesion = new Usuario (null, null, this.usuario.correo, null, this.usuario.password)
+    let inicioSesion = new Usuario (null,null, null, this.usuario.correo, null, this.usuario.password)
     this.apiService.login(inicioSesion).subscribe((data:any) => 
     {
-      this.apiService.usuario = data.result[0];
+      this.apiService.usuario1 = data.result[0];
       
       if(data.error == false){
         this.apiService.logueado = true;

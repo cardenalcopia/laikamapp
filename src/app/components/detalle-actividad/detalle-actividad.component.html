@@ -2,19 +2,19 @@
 
     <div class="card__ubicacion">
 
-        <div class="card__titulo">{{ detalle.titulo | titlecase }}</div>
+        <div class="card__titulo">{{ card.titulo }}</div>
         
         <!-- <img src="{{detalle.imagen}}" alt="Imagen"> -->
 
         <div class="card__detalle">
-            <div class="card__dierccion linea">📍 {{ detalle.localizacion }}</div>
+            <div class="card__dierccion linea">📍 {{ card.localizacion }}</div>
             <div class="card__distancia linea">🚶 Dist.: 150 m.</div>
-            <div class="card__hora linea">⌚ {{ detalle.hora }} Hrs.</div>
-            <div class="card__precio linea">💶 {{ detalle.precio }} €</div>
+            <div class="card__hora linea">⌚ {{ card.hora }} Hrs.</div>
+            <div class="card__precio linea">💶 {{ card.precio }} €</div>
         </div>
 
         <div class="card__informacion">
-            <div class="card__texto">{{ detalle.informacion }} </div>
+            <div class="card__texto">{{ card.informacion }} </div>
         </div>
         
     </div>
