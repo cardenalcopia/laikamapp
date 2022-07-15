@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ActividadesService } from 'src/app/services/actividades.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Apuntadas } from 'src/app/models/apuntadas';
+import { PlacesService } from '../../services/places.service';
 
 @Component({
   selector: 'app-detalle-actividad',
@@ -16,10 +17,16 @@ export class DetalleActividadComponent implements OnInit {
   public card:Actividades;
   @Input() detalle: Actividades;
 
-  constructor(public router: Router, private toastr: ToastrService,public actividadService:ActividadesService,public usuarioService:UsuarioService) 
+   
+  constructor(
+    public router: Router, 
+    private toastr: ToastrService,
+    public actividadService:ActividadesService,
+    public placesService: PlacesService,
+    public usuarioService:UsuarioService
+    ) 
   {
     this.card=actividadService.actividadinfo
-
    }
 
    

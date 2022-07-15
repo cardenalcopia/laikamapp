@@ -18,7 +18,7 @@ export class CardPipicanComponent implements OnInit {
 
   getInfo(pipican:Pipican){
 
-    this.pipicanService.pipicanInfo = new Pipican(this.cardsPadre.id_pipican, this.cardsPadre.imagen, this.cardsPadre.titulo, this.cardsPadre.calle, this.cardsPadre.distancia);
+    this.pipicanService.pipicanInfo = new Pipican(this.cardsPadre.id_pipican, this.cardsPadre.imagen, this.cardsPadre.titulo, this.cardsPadre.calle, this.cardsPadre.distrito, this.cardsPadre.longitud, this.cardsPadre.latitud);
     
     this.router.navigateByUrl("/pipicanCard");
   }

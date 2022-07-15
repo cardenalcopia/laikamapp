@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actividades } from 'src/app/models/actividades';
 import { ActividadesService } from 'src/app/services/actividades.service';
-import { UsuarioService } from 'src/app/services/usuario.service';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +19,10 @@ public muestra :Actividades[]=[];
 
   }
   ngOnInit(): void {
+  }
+
+  cerrarSesion(){
+    this.usuarioService.logueado = false;
   }
 
 }

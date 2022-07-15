@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class PlacesService {
 
-  public url : string = "http://localhost:3000";
+  public url : string = "http://localhost:3000/home";
+
+  
 
   public userLocation?: [number, number];
 
@@ -46,8 +48,6 @@ export class PlacesService {
   }
 
   getPipicanes():Observable<Object>{
-
-    //dentro del get iría el endpoint para obtener lo todos los pipicanes
 
     return this.http.get(this.url);
 
