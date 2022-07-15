@@ -51,6 +51,8 @@ export class ActividadesService {
   }
   postApuntarse(apuntada:Apuntadas):Observable<object>
   {
+    console.log(apuntada);
+    
     this.url="http://localhost:3000/actividadCard"
     return this.http.post(this.url,apuntada)
   }
