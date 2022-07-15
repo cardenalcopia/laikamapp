@@ -46,6 +46,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
 import { CardCreadasActividadComponent } from './components/card-creadas-actividad/card-creadas-actividad.component';
 import { CreadasComponent } from './pages/creadas/creadas.component';
+import { FormularioEditarActividadComponent } from './components/formulario-editar-actividad/formulario-editar-actividad.component';
+import { ModificarComponent } from './pages/modificar/modificar.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import { CreadasComponent } from './pages/creadas/creadas.component';
     LoadingMapaComponent,
     BtnMyLocationComponent,
     CardCreadasActividadComponent,
-    CreadasComponent
+    CreadasComponent,
+    FormularioEditarActividadComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,

@@ -23,3 +23,4 @@ export class CardActividadesComponent implements OnInit {
   }
 
 }
+

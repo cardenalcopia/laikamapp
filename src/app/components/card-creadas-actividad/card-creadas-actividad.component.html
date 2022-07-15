@@ -1,33 +1,35 @@
-<mat-card class="card1">
-    <!-- a para poner el enlace a la card -->
-    <!-- <a class="botonCard" routerLink=""> -->
-        <div class="tituloPadre">
-            <div class="actividadImagen">
-                <img class="tituloImagen" src="{{cardsPadre.imagen}}">
-            </div>
-            <div class="tituloTexto">
-                <div class="card__titulo">{{cardsPadre.titulo}}</div>
-                <div class="card__creador">Creador</div>
-            </div>
-        </div>
-        <div class="tipo__lugar">
-            <mat-card-content class="card__calle">🐕‍🦺 {{cardsPadre.tipo}}</mat-card-content>
-            <mat-card-content class="card__calle">📍 {{cardsPadre.localizacion}}</mat-card-content>
-        </div>
-        <div class="fecha__disponible">
-            <div class="card__fecha">
-                <mat-card-content class="card__fecha--date">📅 {{cardsPadre.fecha}}</mat-card-content>
-                <!-- <mat-card-content class="card__informacion">📲 Para más información</mat-card-content> -->
-            </div>
-            <div class="card__desapuntarse">
-                <!-- Botón modal -->
-                <button type="button" class="btn btn-white" id="desapuntarse" routerLink="/crear">Editar</button>
-            </div>
-        </div>
-        <!--  -->
-        <!-- Modal -->
-       
-    <!-- </a> -->
-</mat-card>  
 
+
+    <mat-card class="card1">
+        <!-- a para poner el enlace a la card -->
+        <!-- <a class="botonCard" routerLink=""> -->
+        
+            <div class="tituloPadre">
+                <div class="actividadImagen">
+                    <img class="tituloImagen" src="{{cardsPadre2.imagen}}">
+                </div>
+                <div class="tituloTexto">
+                    <div class="card__titulo">{{cardsPadre2.titulo}}</div>
+                    <div class="card__creador">Creador</div>
+                </div>
+            </div>
+            <div class="tipo__lugar">
+                <mat-card-content class="card__calle">🐕‍🦺 {{cardsPadre2.tipo}}</mat-card-content>
+                <mat-card-content class="card__calle">📍 {{cardsPadre2.localizacion}}</mat-card-content>
+            </div>
+            <div class="fecha__disponible">
+                <div class="card__fecha">
+                    <mat-card-content class="card__fecha--date">📅 {{cardsPadre2.fecha}}</mat-card-content>
+                    <!-- <mat-card-content class="card__informacion">📲 Para más información</mat-card-content> -->
+                </div>
+                <div class="card__desapuntarse">
+                    <!-- Botón modal -->
+                    <button type="button" class="btn btn-white" id="desapuntarse"  on-click="getCard(cardsPadre2)">Editar</button>
+                </div>
+            </div>
+            <!--  -->
+            <!-- Modal -->
+           
+        <!-- </a> -->
+    </mat-card>  
 

@@ -1,5 +1,5 @@
 <div class="cardPadre">
-    <div class="cards" *ngFor="let cardsPadre of cards">
-        <app-card-apuntadas-actividad [cardsPadre]="cardsPadre" (eventoCard)="borrar($event)"></app-card-apuntadas-actividad>
+    <div class="cards" *ngFor="let actApuntada of actApuntadas">
+        <app-card-apuntadas-actividad [cardsPadre]="actApuntada" (eventoCard)="borrar($event)"></app-card-apuntadas-actividad>
     </div>
 </div>

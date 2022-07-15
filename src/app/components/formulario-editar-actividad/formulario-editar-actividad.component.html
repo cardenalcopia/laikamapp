@@ -1,0 +1,171 @@
+<div class="contenedor">
+
+    <div class="formContainer row">
+
+        <form id="form"  #userForm="ngForm" >
+
+             <div class="form-group mt-2 w-100">
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" value="{{micard.titulo}}"
+                [(ngModel)]="micard.titulo" #tituloCrear="ngModel"
+                [ngClass]="{'is-invalid': (tituloCrear.dirty || tituloCrear.touched) && tituloCrear.invalid }"
+                required
+                >
+                
+                <div class="invalid-feedback" *ngIf="(tituloCrear.dirty || tituloCrear.touched) && tituloCrear.invalid">
+                    
+                    <div *ngIf="tituloCrear.errors['required']">
+                        <p>
+                            El titulo es obligatorio
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group mt-2 w-100">
+                <select class="form-select" aria-label="Default select example"
+                [(ngModel)]="micard.tipo"
+                name="opcion"
+                #tipoCrear="ngModel"
+                >
+                    <option 
+                    *ngFor="let opcion of opciones"
+                    >
+                        {{opcion}}
+                    </option>
+                </select>
+                <!-- <div class="invalid-feedback" *ngIf="(tipoCrear.dirty || tipoCrear.touched) && tipoCrear.invalid">
+                    
+                    <div *ngIf="tipoCrear.errors['required']">
+                        <p>
+                            El tipo es obligatorio
+                        </p>
+                    </div>
+                    
+                </div> -->
+                
+            </div>
+            
+            <div class="form-group mt-2 w-100">
+                
+                <input type="date" class="form-control" name="fecha" placeholder="Fecha" value="{{micard.fecha}}"
+                [(ngModel)]="micard.fecha" #fechaCrear="ngModel"
+                [ngClass]="{'is-invalid': (fechaCrear.dirty || fechaCrear.touched) && fechaCrear.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(fechaCrear.dirty || fechaCrear.touched) && fechaCrear.invalid">
+                    
+                    <div *ngIf="fechaCrear.errors['required']">
+                        <p>
+                            La fecha es obligatoria
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="form-group mt-2 w-100">
+                
+                <input type="time" class="form-control" name="hora" placeholder="Hora" value="{{micard.hora}}"
+                [(ngModel)]="micard.hora" #horaCrear="ngModel"
+                [ngClass]="{'is-invalid': (horaCrear.dirty || horaCrear.touched) && horaCrear.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(horaCrear.dirty || horaCrear.touched) && horaCrear.invalid">
+                    
+                    <div *ngIf="horaCrear.errors['required']">
+                        <p>
+                            La hora es obligatioria
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="input-group mt-2 w-100">
+
+                <span class="input-group-text">€</span>
+                <input type="text" class="form-control" name="precio" placeholder="Precio" value="{{micard.precio}}"
+                [(ngModel)]="micard.precio" #fechaCrear="ngModel"
+                aria-label="Amount (to the nearest dollar)"
+                >              
+                <span class="input-group-text">.00</span>
+                
+            </div>
+            
+            <div class="form-group mt-2 w-100">
+                
+                <input type="text" class="form-control" id="localizacion" name="localizacion" placeholder="Localización" value="{{micard.localizacion}}"
+                [(ngModel)]="micard.localizacion" #localizacionCrear="ngModel"
+                [ngClass]="{'is-invalid': (localizacionCrear.dirty || localizacionCrear.touched) && localizacionCrear.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(localizacionCrear.dirty || localizacionCrear.touched) && localizacionCrear.invalid">
+                    
+                    <div *ngIf="localizacionCrear.errors['required']">
+                        <p>
+                            La localización es obligatoria
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="form-group mt-2 w-100">
+                
+                <input type="number" class="form-control" id="maxPerros" name="maxPerros" placeholder="Max. Perros" value="{{micard.maxperros}}"
+                [(ngModel)]="micard.maxperros" #perrosCrear="ngModel"
+                [ngClass]="{'is-invalid': (perrosCrear.dirty || perrosCrear.touched) && perrosCrear.invalid }"
+                required
+                >
+                <div class="invalid-feedback" *ngIf="(perrosCrear.dirty || perrosCrear.touched) && perrosCrear.invalid">
+                    
+                    <div *ngIf="perrosCrear.errors['required']">
+                        <p>
+                            La cantidad máxima de perros es obligatoria
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="form-group mt-2 w-100">
+                
+                <textarea cols="30" rows="1" class="form-control" id="info" name="info" placeholder="Información..." 
+                [(ngModel)]="micard.informacion" #infoCrear="ngModel"
+                [ngClass]="{'is-invalid': (infoCrear.dirty || infoCrear.touched) && infoCrear.invalid }"
+                required
+                >
+                </textarea>
+                <div class="invalid-feedback" *ngIf="(infoCrear.dirty || infoCrear.touched) && infoCrear.invalid">
+                    
+                    <div *ngIf="infoCrear.errors['required']">
+                        <p>
+                            La información es obligatoria
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+            
+            
+            <app-button [valor]="'Gurdar Cambios'" (click)="crear(micard)" ></app-button>
+
+
+        </form>
+
+    </div>
+
+
+
+</div>
+
+

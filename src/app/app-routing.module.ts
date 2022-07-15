@@ -16,7 +16,7 @@ import { CardsActividadesComponent } from './pages/cards-actividades/cards-activ
 import { PipicanComponent } from './pages/pipican/pipican.component';
 import { AddActividadComponent } from './pages/add-actividad/add-actividad.component';
 import { ActividadComponent } from './pages/actividad/actividad.component';
-
+import {ModificarComponent} from './pages/modificar/modificar.component'
 const routes: Routes = [
   {path: "", component: LoginComponent},
   {path:"home",component:HomeComponent},
@@ -37,7 +37,7 @@ const routes: Routes = [
   {path: "crear", component: AddActividadComponent},
   {path: "actividad", component: ActividadComponent},
   {path:"actividadCard", component:ActividadComponent},
-
+  {path:"modificar",component:ModificarComponent}
 ]
 
 

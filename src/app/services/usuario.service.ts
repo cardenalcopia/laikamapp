@@ -26,5 +26,10 @@ export class UsuarioService {
     this.usuario1=usuario;
     return this.http.post(this.url + "login", usuario)
   }
+  getMostarPerfil(id_usuario:number)
+  {
+    this.url="http://localhost:3000/prefil?id_usuario="+id_usuario
+    return this.http.get(this.url)
+  }
 
 }

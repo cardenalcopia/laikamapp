@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 
 import { ToastrService } from 'ngx-toastr';
 import { ActividadesService } from 'src/app/services/actividades.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { Apuntadas } from 'src/app/models/apuntadas';
 
 @Component({
   selector: 'app-detalle-actividad',
@@ -14,12 +16,13 @@ export class DetalleActividadComponent implements OnInit {
   public card:Actividades;
   @Input() detalle: Actividades;
 
-  constructor(public router: Router, private toastr: ToastrService,public actividadService:ActividadesService) 
+  constructor(public router: Router, private toastr: ToastrService,public actividadService:ActividadesService,public usuarioService:UsuarioService) 
   {
     this.card=actividadService.actividadinfo
 
    }
 
+   
   ngOnInit(): void {
   }
 
@@ -28,6 +31,14 @@ export class DetalleActividadComponent implements OnInit {
   }
 
   apuntadas(){
+    let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,this.usuarioService.usuario1.id_usuario)
+       
+      this.actividadService.postApuntarse(miapuntada)
+        .subscribe((data:Apuntadas)=>{
+      console.log(data)
+     
+    })
+    
     this.router.navigateByUrl('/apuntadas');
 
     this.showSuccess();

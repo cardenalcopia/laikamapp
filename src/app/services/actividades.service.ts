@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Actividades} from '../models/actividades'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { Apuntadas } from '../models/apuntadas';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +11,8 @@ export class ActividadesService {
   private url:string;
   public actividad:Actividades;
   public actividadinfo:Actividades;
+  public actividadmodificar :Actividades;
+  public actividadesCreadas: Actividades[];
   
   constructor(private http:HttpClient) { }
   getAll(tipo:string):Observable<object>{
@@ -26,5 +28,30 @@ export class ActividadesService {
   {
     this.url="http://localhost:3000/actividadCard?id_actividad="+id_actividad
     return this.http.get(this.url)
+  }
+  getOneCreada(id_actividad:number)
+  {
+    this.url="http://localhost:3000/modificar?id_actividad="+id_actividad
+    return this.http.get(this.url)
+  }
+  putCreada(actividad:Actividades)
+  {
+    this.url="http://localhost:3000/modificar"
+    return this.http.put(this.url,actividad)
+  }
+  getAllCreadas(id_usuario:number)
+  {
+    this.url="http://localhost:3000/creadas"
+    return this.http.get(this.url+"?id_usuario="+id_usuario)
+  }
+  getAllApuntadas(id_usuario:number)
+  {
+    this.url="http://localhost:3000/apuntadas"
+    return this.http.get(this.url+"?id_usuario="+id_usuario)
+  }
+  postApuntarse(apuntada:Apuntadas):Observable<object>
+  {
+    this.url="http://localhost:3000/actividadCard"
+    return this.http.post(this.url,apuntada)
   }
 }
