@@ -49,8 +49,6 @@ export class PlacesService {
 
   getPipicanes():Observable<Object>{
 
-    //dentro del get iría el endpoint para obtener lo todos los pipicanes
-
     return this.http.get(this.url);
 
   }

@@ -50,7 +50,6 @@ export class MapaComponent implements AfterViewInit {
 
     this.placesService.getPipicanes()
       .subscribe( data => {
-        console.log('--------')
         console.log( data );
 
         this.mapService.createMarkers( data as Pipican[] )

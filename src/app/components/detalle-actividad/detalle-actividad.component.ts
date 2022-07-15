@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { ToastrService } from 'ngx-toastr';
 import { ActividadesService } from 'src/app/services/actividades.service';
+import { PlacesService } from '../../services/places.service';
 
 @Component({
   selector: 'app-detalle-actividad',
@@ -14,10 +15,14 @@ export class DetalleActividadComponent implements OnInit {
   public card:Actividades;
   @Input() detalle: Actividades;
 
-  constructor(public router: Router, private toastr: ToastrService,public actividadService:ActividadesService) 
+  constructor(
+    public router: Router, 
+    private toastr: ToastrService,
+    public actividadService:ActividadesService,
+    public placesService: PlacesService
+    ) 
   {
     this.card=actividadService.actividadinfo
-
    }
 
   ngOnInit(): void {
