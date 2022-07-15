@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Pipican } from 'src/app/models/pipican';
+import { PlacesService } from 'src/app/services';
 import { PipicanService } from 'src/app/services/pipican.service';
 
 @Component({
@@ -9,8 +11,12 @@ import { PipicanService } from 'src/app/services/pipican.service';
 })
 export class PipicanComponent implements OnInit {
   public card: Pipican;
+  public id_card: string;
 
-  constructor(public pipicanService:PipicanService) { 
+  constructor(
+    public pipicanService:PipicanService,
+    public placesService:PlacesService
+    ) { 
     this.card = pipicanService.pipicanInfo
   }
 
@@ -23,6 +29,7 @@ export class PipicanComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  
   }
 
 }

@@ -41,18 +41,13 @@ export class MapaComponent implements AfterViewInit {
       .setLngLat(this.placesService.userLocation)
       .setPopup( popup )
       .addTo( map )
-
-    // new Marker()
-    // .setLngLat([-3.4744476, 40.399487])
-    // .addTo( map )
     
     this.mapService.setMap( map );
 
     this.placesService.getPipicanes()
-      .subscribe( data => {
-        console.log( data );
+      .subscribe( (data: Pipican[]) => {
 
-        this.mapService.createMarkers( data as Pipican[] )
+        this.mapService.createMarkers( data )
 
       })    
 

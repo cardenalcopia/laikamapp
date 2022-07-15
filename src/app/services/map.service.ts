@@ -37,6 +37,7 @@ export class MapService {
   ) { }
 
   pipicanInfo( pipican: Pipican ){
+
     this.pipicanService.pipicanInfo = pipican;
 
     this.router.navigateByUrl('/pipicanCard');
@@ -59,17 +60,23 @@ export class MapService {
 
       const calle =  pipican.calle;
 
-      const popup = new Popup()
-      .setHTML("<h5>"+ calle +"</h5>" + "<button onclick='pipicanInfo("+pipican+")'>ir...</button>"
+      // const popup = new Popup()
+      // .setHTML("<h5>"+ calle +"</h5>" + "<a href=\"pipicanCard/1\"> ir </a>"
+      // .setHTML("<h5>"+ calle +"</h5>" + "<a routerLink=\"/pipicanCard/1\"> ir </a>"
         // <span>Información Pipican...</span>
-      )
+      // )
       
 
       const newMarker = new Marker()
         // .setLngLat([-3.744693, 40.399487])
         .setLngLat([longitud, latitud])
-        .setPopup( popup )
+        // .setPopup( popup )
         .addTo( this.map )
+
+      newMarker.getElement().addEventListener( 'click', () => {
+        console.log(pipican)
+        this.pipicanInfo(pipican);
+      })
 
       newMarkers.push( newMarker );
 
