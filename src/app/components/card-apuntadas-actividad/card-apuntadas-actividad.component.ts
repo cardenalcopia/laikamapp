@@ -14,7 +14,7 @@ export class CardApuntadasActividadComponent implements OnInit {
   @Output() eventoCard = new EventEmitter<number>();
 
   constructor(public dialog: MatDialog, public actividadesService: ActividadesService) { 
-    this.actividadesService.cardsModal = new Actividades (null, null, null, null, null, null, null, null, null, null, null)
+    this.actividadesService.cardsModal = new Actividades (null, null, null, null, null, null, null, null, null, null, null, null)
   }
 
   // openDialog() {

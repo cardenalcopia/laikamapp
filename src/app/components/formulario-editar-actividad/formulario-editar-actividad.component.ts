@@ -42,7 +42,8 @@ export class FormularioEditarActividadComponent implements OnInit {
   crear(miactiv:Actividades){
 let actividadnuva:Actividades= new Actividades(miactiv.id_actividades,miactiv.imagen,miactiv.titulo,
                                                miactiv.tipo,miactiv.fecha,miactiv.hora,miactiv.precio,
-                                               miactiv.localizacion,miactiv.maxperros,miactiv.informacion,miactiv.id_usuario)
+                                               miactiv.localizacion,miactiv.maxperros,miactiv.informacion,
+                                               miactiv.id_usuario, miactiv.disponibles)
                                                this.actividadService.putCreada(actividadnuva).subscribe((data:Actividades)=>{
                                                 console.log(data)
                                                })

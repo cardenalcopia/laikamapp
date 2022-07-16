@@ -26,7 +26,7 @@ export class FormularioAddActividadComponent implements OnInit {
 
     if(this.editar == false){
 
-      this.actividad = new Actividades(null, null, null, this.selected, null, null, '0', null, null, null,null);
+      this.actividad = new Actividades(null, null, null, this.selected, null, null, '0', null, null, null,null, null);
       console.log(this.actividad);
 
     }
@@ -34,13 +34,17 @@ export class FormularioAddActividadComponent implements OnInit {
 
       //Aquí iria la actividad a editar
       //Se crea una nueva actividad simplemente para el ejemplo
-      this.actividad = new Actividades(null, null, 'Paseo de Perros', this.selected, new Date("2022, 07, 22"), '18:30', '10', 'C/Luna', 7, 'Los que quieran ir',null);
+      this.actividad = new Actividades(null, null, 'Paseo de Perros', this.selected, new Date("2022, 07, 22"), '18:30', '10', 'C/Luna', 7, 'Los que quieran ir',null, null);
 
     }
    }
    addActiv()
    {
-   this.actividad.id_usuario= this.userService.usuario1.id_usuario
+    this.actividad.id_usuario= this.userService.usuario1.id_usuario
+    this.actividad.disponibles = this.actividad.maxperros
+    console.log(this.actividad.disponibles);
+    console.log(this.actividad);
+    
       this.actividadService.addActividad(this.actividad).subscribe((data)=>{
         console.log(data)
       })

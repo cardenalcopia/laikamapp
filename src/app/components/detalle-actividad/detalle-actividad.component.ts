@@ -37,7 +37,7 @@ export class DetalleActividadComponent implements OnInit {
     this.toastr.success('Te has apuntado a esta actividad', 'Enhorabuena!!!');
   }
 
-  apuntadas(){
+  apuntadas(id:number){
     let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,this.usuarioService.usuario1.id_usuario)
        console.log("esto se merece un 10 y una Kevin Bacon");
        
@@ -46,7 +46,22 @@ export class DetalleActividadComponent implements OnInit {
       console.log(data)
      
     })
+    for(let i=0; i<this.actividadService.actividadesDisponibles.length; i++){
+
+      if(this.actividadService.actividadesDisponibles[i].id_actividades == id){
+        this.actividadService.actividadesDisponibles[i].disponibles -= this.usuarioService.usuario1.num_perros
+        console.log(this.actividadService.actividadesDisponibles[i].disponibles);
+        console.log(this.actividadService.actividadesDisponibles[i].id_actividades);
+        
+        let apuntada:Actividades = new Actividades(this.actividadService.actividadesDisponibles[i].id_actividades, null, null,
+          null, null, null, null, null, null, null, null, this.actividadService.actividadesDisponibles[i].disponibles)
+        this.actividadService.putDiponibles(apuntada).subscribe((data:Actividades)=>{
+          console.log(data);
+        })
+      }
+    }
     
+
     this.router.navigateByUrl('/apuntadas');
 
     this.showSuccess();

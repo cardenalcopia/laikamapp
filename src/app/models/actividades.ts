@@ -10,9 +10,10 @@ export class Actividades {
     public maxperros:number;
     public informacion:string;
     public id_usuario:number;
+    public disponibles:number;
     constructor(id_actividades:number, imagen:string, titulo:string, tipo:string, 
         fecha:Date, hora:string, precio:string, localizacion:string, maxperros:number, 
-        informacion:string, id_usuario:number ){
+        informacion:string, id_usuario:number, disponibles:number ){
     this.id_actividades = id_actividades;
     this.imagen         = imagen;
     this.titulo         = titulo;
@@ -24,5 +25,6 @@ export class Actividades {
     this.maxperros      = maxperros;
     this.informacion    = informacion;
     this.id_usuario     = id_usuario;
+    this.disponibles    = disponibles;
     }
 }
