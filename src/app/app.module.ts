@@ -42,7 +42,7 @@ import { LoadingMapaComponent } from './components/loading-mapa/loading-mapa.com
 import { BtnMyLocationComponent } from './components/btn-my-location/btn-my-location.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from "@angular/common/http";
 import { CardCreadasActividadComponent } from './components/card-creadas-actividad/card-creadas-actividad.component';
 import { CreadasComponent } from './pages/creadas/creadas.component';
@@ -100,6 +100,7 @@ import { ModificarComponent } from './pages/modificar/modificar.component';
     ToastrModule.forRoot(),
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
     HttpClientModule,
   ],
   providers: [],

@@ -13,6 +13,7 @@ export class ActividadesService {
   public actividadinfo:Actividades;
   public actividadmodificar :Actividades;
   public actividadesCreadas: Actividades[];
+  public cardsModal:Actividades;
   
   constructor(private http:HttpClient) { }
   getAll(tipo:string):Observable<object>{
@@ -55,5 +56,10 @@ export class ActividadesService {
     
     this.url="http://localhost:3000/actividadCard"
     return this.http.post(this.url,apuntada)
+  }
+  deleteApuntadas(id_actividades:number, id_usuario:number){
+
+    this.url="http://localhost:3000/apuntadas"
+    return this.http.delete(this.url +"?id_actividades=" + id_actividades + "&id_usuario=" + id_usuario)
   }
 }
