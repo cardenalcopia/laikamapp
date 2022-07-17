@@ -1,7 +1,7 @@
 <div class="card">
-    <img src="http://www.xn--grupobriceo-beb.es//CMS/Ficheros/Imagenes/20170210-104846.med.jpg" alt="Imagen">
+    <img src="{{card.imagen}}" alt="Imagen">
     <div class="card__texto">
-        <div class="card__titulo">{{card.titulo}}</div>
+        <div class="card__titulo">{{card.distrito}}</div>
         <div class="card__calle">📍 {{card.calle}}</div>
         <!-- <div class="card__calle--rating"> -->
             <div class="card__rating mb-2">
@@ -33,6 +33,6 @@
             <div class="pipicanes__cesped">🌿 Zona de cesped</div>
             <div class="pipicanes__entrenamiento">🏋 Zona de entrenamiento</div>
             <div class="pipicanes__fuente">⛲ Fuente</div>
-            <div class="pipicanes__varios">📖 Información que podamos hacer</div>
+            <div class="pipicanes__varios">📖 Información que podamos hacer{{card.informacion}}</div>
     </div>
 </div>

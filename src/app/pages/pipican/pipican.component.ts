@@ -35,7 +35,7 @@ export class PipicanComponent implements OnInit {
       console.log(data);
       avg = data
       console.log(avg);
-      let pipican = new Pipican(this.pipicanService.pipicanInfo.id_pipican, null, null, null, null, null, null, avg[0].marks)
+      let pipican = new Pipican(this.pipicanService.pipicanInfo.id_pipican, null, null, null, null, null, null, avg[0].marks, null)
       this.pipicanService.putAvg(pipican).subscribe((data:Pipican)=>{
       console.log(data);
     })
