@@ -37,7 +37,8 @@ const routes: Routes = [
   {path: "crear", component: AddActividadComponent},
   {path: "actividad", component: ActividadComponent},
   {path:"actividadCard", component:ActividadComponent},
-  {path:"modificar",component:ModificarComponent}
+  {path:"modificar",component:ModificarComponent},
+  {path: "pipicanCard/:id", component:PipicanComponent}
 ]
 
 

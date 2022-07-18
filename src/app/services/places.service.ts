@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Pipican } from '../models/pipican';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,6 @@ import { Observable } from 'rxjs';
 export class PlacesService {
 
   public url : string = "http://localhost:3000/home";
-
-  
 
   public userLocation?: [number, number];
 
@@ -35,8 +34,6 @@ export class PlacesService {
           resolve( this.userLocation );
         },
         ( err ) => {
-
-          // alert('No se pudo obtener la geolocalización');
           console.log(err)
           reject();
         }
