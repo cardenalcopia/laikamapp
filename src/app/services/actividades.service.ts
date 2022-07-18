@@ -63,9 +63,9 @@ export class ActividadesService {
     this.url="http://localhost:3000/apuntadas"
     return this.http.delete(this.url +"?id_actividades=" + id_actividades + "&id_usuario=" + id_usuario)
   }
-  putDiponibles(disponibles:Actividades){
+  // putDiponibles(disponibles:Actividades){
 
-    this.url = "http://localhost:3000/actividadCard"
-    return this.http.put(this.url, disponibles)
-  }
+  //   this.url = "http://localhost:3000/actividadCard"
+  //   return this.http.put(this.url, disponibles)
+  // }
 }

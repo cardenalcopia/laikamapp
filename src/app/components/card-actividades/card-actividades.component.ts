@@ -14,7 +14,7 @@ export class CardActividadesComponent implements OnInit {
   constructor(public actividadService:ActividadesService,public router:Router) { }
   getCard(actividad:Actividades)
   {
-    this.actividadService.actividadinfo= new Actividades(this.cardsPadre1.id_actividades,this.cardsPadre1.imagen,this.cardsPadre1.titulo,this.cardsPadre1.tipo,this.cardsPadre1.fecha,this.cardsPadre1.hora,this.cardsPadre1.precio,this.cardsPadre1.localizacion,this.cardsPadre1.maxperros,this.cardsPadre1.informacion,this.cardsPadre1.id_usuario, this.cardsPadre1.disponibles)
+    this.actividadService.actividadinfo= new Actividades(this.cardsPadre1.id_actividades,this.cardsPadre1.imagen,this.cardsPadre1.titulo,this.cardsPadre1.tipo,this.cardsPadre1.fecha,this.cardsPadre1.hora,this.cardsPadre1.precio,this.cardsPadre1.localizacion,this.cardsPadre1.maxperros,this.cardsPadre1.informacion,this.cardsPadre1.id_creador, this.cardsPadre1.disponibles)
     console.log(this.actividadService.actividadinfo)
     this.router.navigateByUrl("/actividadCard")
   }

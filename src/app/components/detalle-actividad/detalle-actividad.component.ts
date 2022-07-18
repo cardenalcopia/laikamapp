@@ -38,11 +38,13 @@ export class DetalleActividadComponent implements OnInit {
   }
 
   apuntadas(id:number){
-    let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,this.usuarioService.usuario1.id_usuario)
-       console.log("esto se merece un 10 y una Kevin Bacon");
+    let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,
+                                              this.usuarioService.usuario1.id_usuario,
+                                              this.usuarioService.usuario1.num_perros,this.actividadService.actividadinfo.id_creador,
+                                              this.actividadService.actividadinfo.titulo)
        
       this.actividadService.postApuntarse(miapuntada)
-        .subscribe((data:Apuntadas)=>{
+        .subscribe((data:any)=>{
       console.log(data)
      
     })

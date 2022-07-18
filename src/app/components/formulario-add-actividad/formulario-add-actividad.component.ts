@@ -40,7 +40,7 @@ export class FormularioAddActividadComponent implements OnInit {
    }
    addActiv()
    {
-    this.actividad.id_usuario= this.userService.usuario1.id_usuario
+    this.actividad.id_creador= this.userService.usuario1.id_usuario
     this.actividad.disponibles = this.actividad.maxperros
     console.log(this.actividad.disponibles);
     console.log(this.actividad);

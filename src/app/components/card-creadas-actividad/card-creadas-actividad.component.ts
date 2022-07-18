@@ -30,7 +30,7 @@ export class CardCreadasActividadComponent implements OnInit {
   getCard(actividad:Actividades)
   {
 
-    this.actividadService.actividadmodificar= new Actividades(this.cardsPadre2.id_actividades,this.cardsPadre2.imagen,this.cardsPadre2.titulo,this.cardsPadre2.tipo,this.cardsPadre2.fecha,this.cardsPadre2.hora,this.cardsPadre2.precio,this.cardsPadre2.localizacion,this.cardsPadre2.maxperros,this.cardsPadre2.informacion,this.cardsPadre2.id_usuario, this.cardsPadre2.disponibles)
+    this.actividadService.actividadmodificar= new Actividades(this.cardsPadre2.id_actividades,this.cardsPadre2.imagen,this.cardsPadre2.titulo,this.cardsPadre2.tipo,this.cardsPadre2.fecha,this.cardsPadre2.hora,this.cardsPadre2.precio,this.cardsPadre2.localizacion,this.cardsPadre2.maxperros,this.cardsPadre2.informacion,this.cardsPadre2.id_creador, this.cardsPadre2.disponibles)
    
     this.router1.navigateByUrl("/modificar")
   }
