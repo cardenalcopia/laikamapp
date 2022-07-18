@@ -16,13 +16,14 @@ export class ApuntadasComponent implements OnInit {
   //   new Actividades(2, "http://www.xn--grupobriceo-beb.es//CMS/Ficheros/Imagenes/20170210-104846.med.jpg", "Entrenamiento", "Entrenamiento", new Date("2022, 07, 22"), "17:30", "20", "San fermín", 10, "Es una increíble actividad y entrenamiento",null),
   //   new Actividades(3, "https://estaticos-cdn.prensaiberica.es/clip/4ba759e9-621b-483d-a4fc-26781b20cd86_16-9-aspect-ratio_default_0.jpg", "Evento perruno por el monte", "Eventos", new Date("2022, 07, 22"), "18:00", "15", "San fermín", 10, "Es una increíble actividad y evento",null)
   // ]
-  constructor(public actividadService:ActividadesService,
+  constructor(
+    public actividadService:ActividadesService,
     public router1:Router,
     public usuarioService:UsuarioService) { }
+  
+  
   public mostrarApuntadas()
-  { 
-   
-     
+  {  
     this.actividadService.getAllApuntadas(this.usuarioService.usuario1.id_usuario)
       .subscribe((data:Actividades[])=>{
     
@@ -37,16 +38,25 @@ export class ApuntadasComponent implements OnInit {
 
   public borrar(id:number){
 
-    // console.log(id);
-    // console.log("this.cards");
-    // console.log(this.cards);
-    // let filtro = this.cards.filter(filtrar => filtrar.id_actividades == id)
+    console.log(id);
+    console.log("this.actApuntadas");
+    console.log(this.actApuntadas);
+    let filtro = this.actApuntadas.filter(filtrar => filtrar.id_actividades == id)
     
-    // console.log("filtro");
-    // console.log(filtro);
+    console.log("filtro");
+    console.log(filtro);
     
-    // let borrar = id
-    // borrar = this.cards.indexOf(filtro[0])
-    // this.cards.splice(borrar,1);
+    let borrar = id
+    borrar = this.actApuntadas.indexOf(filtro[0])
+    this.actApuntadas.splice(borrar,1);
+
+    // Subscribe
+
+    this.actividadService.deleteApuntadas(id,this.usuarioService.usuario1.id_usuario)
+    .subscribe((data)=>
+    {
+    console.log(data);
+    console.log("data");
+  })
 }
 }

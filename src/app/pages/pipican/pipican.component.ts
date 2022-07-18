@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pipican } from 'src/app/models/pipican';
 import { PlacesService } from 'src/app/services';
+import { Rating } from 'src/app/models/rating';
 import { PipicanService } from 'src/app/services/pipican.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-pipican',
@@ -15,7 +17,8 @@ export class PipicanComponent implements OnInit {
 
   constructor(
     public pipicanService:PipicanService,
-    public placesService:PlacesService
+    public placesService:PlacesService,
+    public usuarioService:UsuarioService
     ) { 
     this.card = pipicanService.pipicanInfo
   }
@@ -25,6 +28,24 @@ export class PipicanComponent implements OnInit {
         this.card=data
         console.log(this.card)
       return this.card
+    })
+  }
+
+  public rating(num:number){
+
+    let rating = new Rating(null, this.pipicanService.pipicanInfo.id_pipican, num, this.usuarioService.usuario1.id_usuario)
+    this.pipicanService.postRating(rating).subscribe((data:Rating)=>{
+      console.log(data);
+    })
+    let avg:number = 0;
+    this.pipicanService.getAvg(this.pipicanService.pipicanInfo.id_pipican).subscribe((data:number)=>{
+      console.log(data);
+      avg = data
+      console.log(avg);
+      let pipican = new Pipican(this.pipicanService.pipicanInfo.id_pipican, null, null, null, null, null, null, avg[0].marks, null)
+      this.pipicanService.putAvg(pipican).subscribe((data:Pipican)=>{
+      console.log(data);
+    })
     })
   }
 

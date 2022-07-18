@@ -6,8 +6,10 @@ export class Pipican {
     public distrito: string
     public longitud: string
     public latitud: string
+    public rating: number
+    public informacion:string
     constructor(id_pipican:number, imagen:string, titulo:string,
-                calle:string, distrito:string, longitud: string, latitud: string){
+                calle:string, distrito:string, longitud: string, latitud: string, rating:number, informacion:string){
         this.id_pipican = id_pipican;
         this.imagen = imagen;
         this.titulo = titulo;
@@ -15,5 +17,7 @@ export class Pipican {
         this.distrito = distrito;
         this.longitud = longitud;
         this.latitud = latitud;
+        this.rating = rating;
+        this.informacion = informacion;
     }
 }

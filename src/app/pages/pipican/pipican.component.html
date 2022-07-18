@@ -1,22 +1,22 @@
 <div class="card">
-    <img src="http://www.xn--grupobriceo-beb.es//CMS/Ficheros/Imagenes/20170210-104846.med.jpg" alt="Imagen">
+    <img src="{{card.imagen}}" alt="Imagen">
     <div class="card__texto">
-        <div class="card__titulo">{{card.titulo}}</div>
+        <div class="card__titulo">{{card.distrito}}</div>
         <div class="card__calle">📍 {{card.calle}}</div>
         <!-- <div class="card__calle--rating"> -->
             <div class="card__rating mb-2">
                 <!-- <span>⭐⭐⭐⭐⭐</span> -->
                 <form>
                     <p class="clasificacion">
-                        <input id="radio1" type="radio" name="estrellas" value="5">
+                        <input id="radio1" type="radio" name="estrellas" value="5" on-click="rating(5)">
                         <label for="radio1">★</label>
-                        <input id="radio2" type="radio" name="estrellas" value="4">
+                        <input id="radio2" type="radio" name="estrellas" value="4" on-click="rating(4)">
                         <label for="radio2">★</label>
-                        <input id="radio3" type="radio" name="estrellas" value="3">
+                        <input id="radio3" type="radio" name="estrellas" value="3" on-click="rating(3)">
                         <label for="radio3">★</label>
-                        <input id="radio4" type="radio" name="estrellas" value="2">
+                        <input id="radio4" type="radio" name="estrellas" value="2" on-click="rating(2)">
                         <label for="radio4">★</label>
-                        <input id="radio5" type="radio" name="estrellas" value="1">
+                        <input id="radio5" type="radio" name="estrellas" value="1" on-click="rating(1)">
                         <label for="radio5">★</label>
                     </p>
                 </form>
@@ -33,6 +33,6 @@
             <div class="pipicanes__cesped">🌿 Zona de cesped</div>
             <div class="pipicanes__entrenamiento">🏋 Zona de entrenamiento</div>
             <div class="pipicanes__fuente">⛲ Fuente</div>
-            <div class="pipicanes__varios">📖 Información que podamos hacer</div>
+            <div class="pipicanes__varios">📖 Información que podamos hacer{{card.informacion}}</div>
     </div>
 </div>

@@ -20,6 +20,7 @@ public mostrar(tipo:string)
    console.log(tipo)
   this.actividadservice.getAll(tipo).subscribe((data:Actividades[])=>{
     this.muestra=data
+    this.actividadservice.actividadesDisponibles=this.muestra
     console.log(this.muestra)
 })
 }
