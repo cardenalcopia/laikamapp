@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chats } from 'src/app/models/chats';
+import { ListadochatsService } from 'src/app/services/listadochats.service';
 
 @Component({
   selector: 'app-listado-chats',
@@ -7,26 +8,27 @@ import { Chats } from 'src/app/models/chats';
   styleUrls: ['./listado-chats.component.css']
 })
 export class ListadoChatsComponent implements OnInit {
-  public chats :Chats[]=[
-    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
-    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
-    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
-    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
-    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
-    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
-    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
-    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
-    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
-  ];
+  public chats :Chats[]=[];
  
 
 
-  constructor() { }
-public getChats():Chats[]
-{
-return this.chats;
-}
+  constructor(public chatsService:ListadochatsService) { }
+// public getChats():Chats[]
+// {
+//   this.chats=this.chatsService.milistado
+// return this.chats;
+// }
+// public postChats()
+// {
+//   this.chatsService.postChats(this.chatsService.milistado)
+//   .subscribe((data:Chats)=>{
+// console.log(data)
+
+
+// })  
+// }
   ngOnInit(): void {
+  
   }
 
 }

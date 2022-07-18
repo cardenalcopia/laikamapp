@@ -7,6 +7,8 @@ import { ActividadesService } from 'src/app/services/actividades.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Apuntadas } from 'src/app/models/apuntadas';
 import { PlacesService } from '../../services/places.service';
+import { Chats } from 'src/app/models/chats';
+import { ListadochatsService } from 'src/app/services/listadochats.service';
 
 @Component({
   selector: 'app-detalle-actividad',
@@ -15,6 +17,7 @@ import { PlacesService } from '../../services/places.service';
 })
 export class DetalleActividadComponent implements OnInit {
   public card:Actividades;
+  public michat:Chats;
   @Input() detalle: Actividades;
 
    
@@ -23,7 +26,8 @@ export class DetalleActividadComponent implements OnInit {
     private toastr: ToastrService,
     public actividadService:ActividadesService,
     public placesService: PlacesService,
-    public usuarioService:UsuarioService
+    public usuarioService:UsuarioService,
+    public chatsService:ListadochatsService
     ) 
   {
     this.card=actividadService.actividadinfo
@@ -38,18 +42,34 @@ export class DetalleActividadComponent implements OnInit {
   }
 
   apuntadas(){
-    let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,this.usuarioService.usuario1.id_usuario)
-       
+   this.apuntarse();
+ 
+ 
+   
+  }
+  apuntarse()
+   {
+     let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,this.usuarioService.usuario1.id_usuario)
+     
       this.actividadService.postApuntarse(miapuntada)
-        .subscribe((data:Apuntadas)=>{
+        .subscribe((data:Apuntadas[])=>{ 
+          this.michat=new Chats(this.card.titulo,this.card.id_usuario,this.usuarioService.usuario1.id_usuario)
+          this.chatsService.milistado=this.michat
+          this.chatsService.postChats(this.michat)
+          .subscribe((data:Chats)=>{
+        console.log(data)
+       
+      })  
       console.log(data)
      
     })
+   
     
     this.router.navigateByUrl('/apuntadas');
 
     this.showSuccess();
-  }
-
+    
+   }
+    
   
 }
