@@ -41,7 +41,7 @@ export class DetalleActividadComponent implements OnInit {
     let miapuntada :Apuntadas= new Apuntadas(null,this.actividadService.actividadinfo.id_actividades,
                                               this.usuarioService.usuario1.id_usuario,
                                               this.usuarioService.usuario1.num_perros,this.actividadService.actividadinfo.id_creador,
-                                              this.actividadService.actividadinfo.titulo)
+                                              this.actividadService.actividadinfo.titulo) 
        
       this.actividadService.postApuntarse(miapuntada)
         .subscribe((data:any)=>{
