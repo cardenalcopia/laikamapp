@@ -25,6 +25,8 @@ export class FormularioEditarActividadComponent implements OnInit {
   constructor(public router: Router, private toastr: ToastrService, public actividadService :ActividadesService, public userService :UsuarioService) {
 
     this.micard=actividadService.actividadmodificar
+
+    console.log(this.micard);
    }
   
 
@@ -39,16 +41,15 @@ export class FormularioEditarActividadComponent implements OnInit {
     this.toastr.success('Actividad editada');
   }
 
-  crear(miactiv:Actividades){
+  editarActividad(miactiv:Actividades){
 let actividadnuva:Actividades= new Actividades(miactiv.id_actividades,miactiv.imagen,miactiv.titulo,
                                                miactiv.tipo,miactiv.fecha,miactiv.hora,miactiv.precio,
                                                miactiv.localizacion,miactiv.maxperros,miactiv.informacion,
                                                miactiv.id_creador, miactiv.disponibles)
-                                               this.actividadService.putCreada(actividadnuva).subscribe((data:Actividades)=>{
-                                                console.log(data)
-                                               })
-    console.log(this.actividad);
-
+                                              //  this.actividadService.putCreada(actividadnuva).subscribe((data:Actividades)=>{
+                                              //   console.log(data)
+                                              //  })
+    
     
       this.editarSuccess();
     

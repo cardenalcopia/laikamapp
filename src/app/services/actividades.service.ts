@@ -41,10 +41,10 @@ export class ActividadesService {
     this.url="http://localhost:3000/modificar"
     return this.http.put(this.url,actividad)
   }
-  getAllCreadas(id_usuario:number)
+  getAllCreadas(id_creador:number)
   {
     this.url="http://localhost:3000/creadas"
-    return this.http.get(this.url+"?id_usuario="+id_usuario)
+    return this.http.get(this.url+"?id_creador="+id_creador)
   }
   getAllApuntadas(id_usuario:number)
   {

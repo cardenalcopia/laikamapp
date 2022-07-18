@@ -41,6 +41,8 @@ export class FormularioAddActividadComponent implements OnInit {
    addActiv()
    {
     this.actividad.id_creador= this.userService.usuario1.id_usuario
+    console.log(this.actividad.id_creador);
+    
     this.actividad.disponibles = this.actividad.maxperros
     console.log(this.actividad.disponibles);
     console.log(this.actividad);
@@ -48,6 +50,7 @@ export class FormularioAddActividadComponent implements OnInit {
       this.actividadService.addActividad(this.actividad).subscribe((data)=>{
         console.log(data)
       })
+      this.crearSuccess()
    }
 
   ngOnInit(): void {
