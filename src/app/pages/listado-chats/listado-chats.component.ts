@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chats } from 'src/app/models/chats';
+import { ListadochatsService } from 'src/app/services/listadochats.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-listado-chats',
@@ -21,12 +23,16 @@ export class ListadoChatsComponent implements OnInit {
  
 
 
-  constructor() { }
-public getChats():Chats[]
+  constructor(public listadochatsservice: ListadochatsService,public usuarioservice:UsuarioService) { }
+public getChats(id_usuario:number):Chats[]
 {
+  this.listadochatsservice.getChats(this.usuarioservice.usuario1.id_usuario).subscribe((data:Chats[])=>{
+    this.chats=data;
+
+  })
 return this.chats;
 }
-  ngOnInit(): void {
+  ngOnInit(): void {this.getChats(this.usuarioservice.usuario1.id_usuario)
   }
 
 }
