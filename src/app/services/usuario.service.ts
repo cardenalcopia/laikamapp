@@ -6,7 +6,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private url:string = "https://laikamappfront.herokuapp.com/";
+  private url:string = "http://localhost:3000/";
   public logueado:boolean = false;
   public usuario1:Usuario;
 
@@ -28,7 +28,7 @@ export class UsuarioService {
   }
   getMostarPerfil(id_usuario:number)
   {
-    this.url="https://laikamappfront.herokuapp.com/prefil?id_usuario="+id_usuario
+    this.url="http://localhost:3000/prefil?id_usuario="+id_usuario
     return this.http.get(this.url)
   }
 

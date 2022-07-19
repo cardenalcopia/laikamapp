@@ -8,7 +8,7 @@ import { Pipican } from '../models/pipican';
 })
 export class PlacesService {
 
-  public url : string = "https://laikamappfront.herokuapp.com/home";
+  public url : string = "http://localhost:3000/home";
 
   public userLocation?: [number, number];
 
