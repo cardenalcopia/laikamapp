@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { Pipican } from 'src/app/models/pipican';
 import { PlacesService } from 'src/app/services';
 import { Rating } from 'src/app/models/rating';
 import { PipicanService } from 'src/app/services/pipican.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-pipican',
@@ -20,7 +21,9 @@ export class PipicanComponent implements OnInit {
   constructor(
     public pipicanService:PipicanService,
     public placesService:PlacesService,
-    public usuarioService:UsuarioService
+    public usuarioService:UsuarioService,
+    public router: Router,
+    public toast:ToastrService
     ) { 
     this.card = pipicanService.pipicanInfo
     console.log(this.usuarioService.getVotaciones(this.usuarioService.usuario1.id_usuario));
@@ -52,6 +55,9 @@ export class PipicanComponent implements OnInit {
   }
 
   public rating(num:number){
+    
+    this.router.navigateByUrl("/cards-pipicanes")
+    this.toast.success('Votación hecha satisfactoriamente');
 
     let rating = new Rating(null, this.pipicanService.pipicanInfo.id_pipican, num, this.usuarioService.usuario1.id_usuario)
     this.pipicanService.postRating(rating).subscribe((data:Rating)=>{
@@ -70,6 +76,7 @@ export class PipicanComponent implements OnInit {
         console.log(data);
       })
     })
+    
   }
 
   ngOnInit(): void {

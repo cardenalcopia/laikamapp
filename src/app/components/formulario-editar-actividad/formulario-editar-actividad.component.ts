@@ -54,7 +54,7 @@ let actividadnuva:Actividades= new Actividades(miactiv.id_actividades,miactiv.im
     
     console.log(actividadnuva);
     
-      this.editarSuccess();
+    this.editarSuccess();
     
 
     this.router.navigateByUrl('/creadas');

@@ -3,6 +3,7 @@ import {Actividades} from '../models/actividades'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Apuntadas } from '../models/apuntadas';
+import { ActividadesUsuario } from '../models/actividades-usuario';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +16,7 @@ export class ActividadesService {
   public actividadesCreadas: Actividades[];
   public cardsModal:Actividades;
   public actividadesDisponibles:Actividades[];
+  public actividadesUsuario:ActividadesUsuario[];
   
   constructor(private http:HttpClient) { }
   getAll(tipo:string):Observable<object>{

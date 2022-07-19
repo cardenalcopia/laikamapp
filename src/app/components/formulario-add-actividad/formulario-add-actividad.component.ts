@@ -26,9 +26,9 @@ export class FormularioAddActividadComponent implements OnInit {
 
     if(this.editar == false){
 
-      this.actividad = new Actividades(null, null, null, this.selected, null, null, '0', null, null, null,null, null);
+      this.actividad = new Actividades(null,'../../../assets/img/area2.jpg', null, this.selected, null, null, '0', null, null, null,null, null);
       console.log(this.actividad);
-
+  
     }
     else{
 
@@ -51,6 +51,8 @@ export class FormularioAddActividadComponent implements OnInit {
         console.log(data)
       })
       this.crearSuccess()
+      this.router.navigateByUrl('/creadas');
+
    }
 
   ngOnInit(): void {
