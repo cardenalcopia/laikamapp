@@ -14,6 +14,8 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class PipicanComponent implements OnInit {
   public card: Pipican;
   public id_card: string;
+  public votar:boolean = true;
+  
 
   constructor(
     public pipicanService:PipicanService,
@@ -21,6 +23,24 @@ export class PipicanComponent implements OnInit {
     public usuarioService:UsuarioService
     ) { 
     this.card = pipicanService.pipicanInfo
+    console.log(this.usuarioService.getVotaciones(this.usuarioService.usuario1.id_usuario));
+    
+    this.usuarioService.getVotaciones(this.usuarioService.usuario1.id_usuario)
+    .subscribe((data:Rating[])=>{
+      console.log(data);
+      this.usuarioService.usuarioVotacion = data
+      console.log(this.usuarioService.usuarioVotacion);
+
+      if(this.usuarioService.usuarioVotacion.length > 0){
+        for(let i = 0; i < this.usuarioService.usuarioVotacion.length; i++){
+          if(this.usuarioService.usuarioVotacion[i].id_pipican == this.card.id_pipican){
+            this.votar = false
+          }
+        }
+      }
+      
+    })
+
   }
 
   public getCardPipican(id:HTMLInputElement){
@@ -36,16 +56,19 @@ export class PipicanComponent implements OnInit {
     let rating = new Rating(null, this.pipicanService.pipicanInfo.id_pipican, num, this.usuarioService.usuario1.id_usuario)
     this.pipicanService.postRating(rating).subscribe((data:Rating)=>{
       console.log(data);
+
     })
+
     let avg:number = 0;
     this.pipicanService.getAvg(this.pipicanService.pipicanInfo.id_pipican).subscribe((data:number)=>{
       console.log(data);
       avg = data
       console.log(avg);
-      let pipican = new Pipican(this.pipicanService.pipicanInfo.id_pipican, null, null, null, null, null, null, avg[0].marks, null)
-      this.pipicanService.putAvg(pipican).subscribe((data:Pipican)=>{
-      console.log(data);
-    })
+
+        let pipican = new Pipican(this.pipicanService.pipicanInfo.id_pipican, null, null, null, null, null, null, avg[0].marks, null)
+        this.pipicanService.putAvg(pipican).subscribe((data:Pipican)=>{
+        console.log(data);
+      })
     })
   }
 
