@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chats } from 'src/app/models/chats';
+import { ListadochatsService } from 'src/app/services/listadochats.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-listado-chats',
@@ -8,25 +10,29 @@ import { Chats } from 'src/app/models/chats';
 })
 export class ListadoChatsComponent implements OnInit {
   public chats :Chats[]=[
-    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
-    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
-    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
-    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
-    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
-    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
-    new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
-    new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
-    new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
+    // new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
+    // new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
+    // new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
+    // new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
+    // new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
+    // new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
+    // new Chats("Paseo por el monte","../../../assets/img/usuario.png"),
+    // new Chats("Entrenamiento de paseo","../../../assets/img/usuario.png"),
+    // new Chats("Quedada de dalmatas","../../../assets/img/usuario.png"),
   ];
  
 
 
-  constructor() { }
-public getChats():Chats[]
+  constructor(public listadochatsservice:ListadochatsService,public usuarioservice:UsuarioService) { }
+public getChats(id_usuario:number):Chats[]
 {
+  this.listadochatsservice.getChats(this.usuarioservice.usuario1.id_usuario).subscribe((data:Chats[])=>{
+    this.chats=data;
+    console.log(this.chats)
+  })
 return this.chats;
 }
-  ngOnInit(): void {
+  ngOnInit(): void {this.getChats(this.usuarioservice.usuario1.id_usuario)
   }
 
 }
