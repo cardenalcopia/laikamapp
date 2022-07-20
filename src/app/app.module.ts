@@ -49,6 +49,7 @@ import { CreadasComponent } from './pages/creadas/creadas.component';
 import { FormularioEditarActividadComponent } from './components/formulario-editar-actividad/formulario-editar-actividad.component';
 import { ModificarComponent } from './pages/modificar/modificar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,6 +103,7 @@ import { ModificarComponent } from './pages/modificar/modificar.component';
     MatIconModule,
     MatDialogModule,
     HttpClientModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
