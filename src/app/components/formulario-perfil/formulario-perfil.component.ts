@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -11,7 +13,7 @@ export class FormularioPerfilComponent implements OnInit {
   public passwordantiguo:string;
   public repetirPassword:string;
 public user :Usuario
-  constructor(public usuarioService:UsuarioService) { this.user=this.usuarioService.usuario1}
+  constructor(public usuarioService:UsuarioService, public toastr:ToastrService, public router:Router) { this.user=this.usuarioService.usuario1}
 modificar(usuariomod:Usuario)
 {
   if ((this.usuarioService.usuario1.password===this.passwordantiguo)&&(usuariomod.password===this.repetirPassword))
@@ -23,11 +25,15 @@ modificar(usuariomod:Usuario)
                                                 usuariomod.password)
   this.usuarioService.putPerfil(miusuarionuevo).subscribe((data:Usuario)=>{
     console.log(data)
+    this.toastr.success('Usuario modificado satisfactoriamente');
+    this.router.navigateByUrl('/home');
 })
   }
   else
   {
     console.log("Comprueba los campos password")
+    this.toastr.error('Campos de password obligatorios para poder modificar los datos del perfil');
+
   }
   
 }
