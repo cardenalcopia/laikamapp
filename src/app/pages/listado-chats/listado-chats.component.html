@@ -6,7 +6,7 @@
     <div class="listado">
         <ul>
             <li *ngFor="let nuevochat of chats">
-                <a routerLink="/chats">
+                <a  (click)="getonechat(nuevochat.id_chat,nuevochat.titulo)">
                 <div class="chat"> 
                 
                       <div class="fotocontacto">
