@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actividades } from 'src/app/models/actividades';
+import { NombreCreador } from 'src/app/models/nombre-creador';
 import { ActividadesService } from 'src/app/services/actividades.service';
 
 @Component({
@@ -9,15 +10,15 @@ import { ActividadesService } from 'src/app/services/actividades.service';
   styleUrls: ['./card-actividades.component.css']
 })
 export class CardActividadesComponent implements OnInit {
-  @Input() cardsPadre1:Actividades;
+  @Input() cardsPadre1:NombreCreador;
 
   constructor(public actividadService:ActividadesService,public router:Router) { 
     
   }
-  getCard(actividad:Actividades)
+  getCard(actividad:NombreCreador)
   {
-    this.actividadService.actividadinfo= new Actividades(this.cardsPadre1.id_actividades,this.cardsPadre1.imagen,this.cardsPadre1.titulo,this.cardsPadre1.tipo,this.cardsPadre1.fecha,this.cardsPadre1.hora,this.cardsPadre1.precio,this.cardsPadre1.localizacion,this.cardsPadre1.maxperros,this.cardsPadre1.informacion,this.cardsPadre1.id_creador, this.cardsPadre1.disponibles)
-    console.log(this.actividadService.actividadinfo)
+    this.actividadService.actividadesNombreCreador= new NombreCreador(this.cardsPadre1.id_actividades,this.cardsPadre1.imagen,this.cardsPadre1.titulo,this.cardsPadre1.tipo,this.cardsPadre1.fecha,this.cardsPadre1.hora,this.cardsPadre1.precio,this.cardsPadre1.localizacion,this.cardsPadre1.maxperros,this.cardsPadre1.informacion,this.cardsPadre1.id_creador, this.cardsPadre1.disponibles, this.cardsPadre1.nombre)
+    console.log(this.actividadService.actividadesNombreCreador)
     this.router.navigateByUrl("/actividadCard")
   }
 

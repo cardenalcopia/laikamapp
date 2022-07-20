@@ -19,7 +19,7 @@ export class ActividadesService {
   public cardsModal:Actividades;
   public actividadesDisponibles:Actividades[];
   public actividadesUsuario:ActividadesUsuario[];
-  public actividadesNombreCreador:NombreCreador[];
+  public actividadesNombreCreador:NombreCreador;
   
   constructor(private http:HttpClient) { }
   getAll(tipo:string):Observable<object>{
