@@ -21,11 +21,11 @@
 
     
     
-    
-    <app-button [valor]="'Apuntarme'" (click)="apuntadas(card.id_actividades)" *ngIf="(card.disponibles>0 && card.disponibles >= this.usuarioService.usuario1.num_perros) || (this.apuntar == false) "></app-button>
+    <div *ngIf="this.apuntar == true">
+        <app-button [valor]="'Apuntarme'" (click)="apuntadas(card.id_actividades)" *ngIf="card.disponibles>0 && card.disponibles >= this.usuarioService.usuario1.num_perros"></app-button>
 
-    <button type="submit" class="btn mt-4" [disabled] *ngIf="this.usuarioService.usuario1.num_perros >= card.disponibles && 0 >= card.disponibles" routerLink="/cards-actividades">Plazas no disponibles</button>
-    
+        <button type="submit" class="btn mt-4" [disabled] *ngIf="this.usuarioService.usuario1.num_perros > card.disponibles || 0 >= card.disponibles" routerLink="/cards-actividades">Plazas no disponibles</button>
+    </div>
     <button type="submit" class="btn mt-4" [disabled] *ngIf="this.apuntar==false" routerLink="/cards-actividades">Ya te has apuntado</button>
 
 </div>

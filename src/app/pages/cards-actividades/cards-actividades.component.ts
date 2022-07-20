@@ -22,6 +22,7 @@ public mostrar(tipo:string)
     this.muestra=data
     this.actividadservice.actividadesDisponibles=this.muestra
     console.log(this.muestra)
+    
 })
 }
   ngOnInit(): void {

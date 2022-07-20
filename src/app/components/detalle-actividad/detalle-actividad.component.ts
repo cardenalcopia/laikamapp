@@ -38,7 +38,7 @@ export class DetalleActividadComponent implements OnInit {
       
       if(this.actividadService.actividadesUsuario.length>0){
         for(let i = 0; i<this.actividadService.actividadesUsuario.length; i++){
-          if(this.actividadService.actividadesUsuario[i].id_usuario == this.usuarioService.usuario1.id_usuario){
+          if(this.actividadService.actividadesUsuario[i].id_actividades == this.card.id_actividades){
               this.apuntar = false
           }
         }
