@@ -10,14 +10,14 @@ import { ActividadesService } from 'src/app/services/actividades.service';
   styleUrls: ['./card-actividades.component.css']
 })
 export class CardActividadesComponent implements OnInit {
-  @Input() cardsPadre1:NombreCreador;
+  @Input() cardsPadre1:Actividades;
 
   constructor(public actividadService:ActividadesService,public router:Router) { 
     
   }
-  getCard(actividad:NombreCreador)
+  getCard(actividad:Actividades)
   {
-    this.actividadService.actividadesNombreCreador= new NombreCreador(this.cardsPadre1.id_actividades,this.cardsPadre1.imagen,this.cardsPadre1.titulo,this.cardsPadre1.tipo,this.cardsPadre1.fecha,this.cardsPadre1.hora,this.cardsPadre1.precio,this.cardsPadre1.localizacion,this.cardsPadre1.maxperros,this.cardsPadre1.informacion,this.cardsPadre1.id_creador, this.cardsPadre1.disponibles, this.cardsPadre1.nombre)
+    this.actividadService.actividadinfo= new Actividades(this.cardsPadre1.id_actividades,this.cardsPadre1.imagen,this.cardsPadre1.titulo,this.cardsPadre1.tipo,this.cardsPadre1.fecha,this.cardsPadre1.hora,this.cardsPadre1.precio,this.cardsPadre1.localizacion,this.cardsPadre1.maxperros,this.cardsPadre1.informacion,this.cardsPadre1.id_creador, this.cardsPadre1.disponibles)
     console.log(this.actividadService.actividadesNombreCreador)
     this.router.navigateByUrl("/actividadCard")
   }
