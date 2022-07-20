@@ -4,7 +4,7 @@
             <img class="mifoto" src="../../../assets/img/usuario.png" alt="">
         </div>
         <div class="titulo">
-            Paseo por el parque
+           {{this.listadochatsservice.mititulo }}
         </div>
         <div class="boton">
             <button routerLink="/listado-chats" class="botonvolver"><img class="volver" src="../../../assets/img/volver.png" alt=""></button>
@@ -12,24 +12,25 @@
     </div>
     <div class="body">
         <div class="mensajenviado"  *ngFor="let nuevaconversacion of conversaciones">
-            <div *ngIf="nuevaconversacion.emisor==1" class="creador">
-                        {{nuevaconversacion.mensaje}}
+            
+            <div *ngIf="nuevaconversacion.id_usuario!=miId" class="creador">
+                    {{nuevaconversacion.mensaje}}
                     </div>
-                    <div *ngIf="nuevaconversacion.emisor==2" class="usuario">
-                        {{nuevaconversacion.mensaje}}
+                    <div *ngIf="nuevaconversacion.id_usuario==miId" class="usuario">
+                       {{nuevaconversacion.mensaje}}
                     </div>
                    
         </div>
         
 
     </div>
-    <div class="mensaje">
+    <form class="mensaje" >
         <div class="input">
-            <input type="text"  class="input2" placeholder="Escribe tu mensaje...">
+            <input type="text" class="input2" placeholder="Escribe tu mensaje..." #mimensaje >
         </div>
-        <div class="botonenviar">
-            <button class="mienviar"><img class="iconoenviar" src="../../../assets/img/enviar.png" alt=""></button>
+        <div class="botonenviar"> 
+            <button class="mienviar" type="submit"><img class="iconoenviar" src="../../../assets/img/enviar.png" alt="" (click)="postMensaje(mimensaje.value)" ></button>
         </div>
 
-    </div>
+    </form>
 </div>
