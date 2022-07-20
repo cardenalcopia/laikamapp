@@ -30,6 +30,7 @@ export class ApuntadasComponent implements OnInit {
       this.actividadService.actividadesCreadas = data;
        console.log(this.actividadService.actividadesCreadas);
         this.actApuntadas = this.actividadService.actividadesCreadas;
+        
   })
   }
   ngOnInit(): void {

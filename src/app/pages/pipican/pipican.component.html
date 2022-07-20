@@ -4,7 +4,7 @@
         <div class="card__titulo">{{card.distrito}}</div>
         <div class="card__calle">📍 {{card.calle}}</div>
         <!-- <div class="card__calle--rating"> -->
-            <div class="card__rating mb-2">
+            <div class="card__rating mb-2" *ngIf="this.votar == true">
                 <!-- <span>⭐⭐⭐⭐⭐</span> -->
                 <form>
                     <p class="clasificacion">

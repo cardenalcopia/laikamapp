@@ -24,7 +24,7 @@ export class FormularioRegistroComponent implements OnInit {
   }
 
   registroSuccess(){
-    this.toastr.success('Asuario creado satisfactoriamente');
+    this.toastr.success('Usuario creado satisfactoriamente');
   }
 
   registrarse(){

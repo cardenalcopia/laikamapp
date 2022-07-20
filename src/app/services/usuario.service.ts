@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Rating } from '../models/rating';
 import { Usuario } from '../models/usuario';
 
 @Injectable({
@@ -9,6 +11,7 @@ export class UsuarioService {
   private url:string = "http://localhost:3000/";
   public logueado:boolean = false;
   public usuario1:Usuario;
+  public usuarioVotacion:Rating[];
 
   constructor(private http: HttpClient) { }
 
@@ -35,6 +38,10 @@ export class UsuarioService {
   {
     this.url="http://localhost:3000/perfil"
     return this.http.put(this.url,user1)
+  }
+  getVotaciones(id_usuario:number):Observable<Object>{
+    
+    return this.http.get(this.url+"pipicanCard?id_usuario="+id_usuario)
   }
 
 }
