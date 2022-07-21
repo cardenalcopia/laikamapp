@@ -48,7 +48,9 @@ this.minombre=this.usuarioservice.usuario1.nombre
     
     this.listadochatsservice.addConversacion(nuevaConversacion).subscribe((data:any)=>{
       console.log("conversacion actualizada con "+data)
+      let form = <HTMLFormElement>document.querySelector('.mensaje');
 
+      form.reset();
       
     })
    }

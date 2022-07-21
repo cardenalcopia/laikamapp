@@ -8,7 +8,7 @@
 
         <div class="card__detalle">
             <div class="card__dierccion linea">📍 {{ card.localizacion }}</div>
-            <div class="card__distancia linea">🚶 Dist.: 150 m.</div>
+            <div class="card__distancia linea">📅 {{ card.fecha | date }}</div>
             <div class="card__hora linea">⌚ {{ card.hora }} Hrs.</div>
             <div class="card__precio linea">💶 {{ card.precio }} €</div>
         </div>

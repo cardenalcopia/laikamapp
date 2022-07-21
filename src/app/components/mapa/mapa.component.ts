@@ -33,8 +33,8 @@ export class MapaComponent implements AfterViewInit {
 
     const popup = new Popup()
       .setHTML(`
-        <h4>Pipican</h4>
-        <span>Información Pipican...</span>
+        <h4>Tu Ubicación</h4>
+        <p>Haz click sobre tu pipican</p>
       `);
 
     new Marker({color: 'red'})

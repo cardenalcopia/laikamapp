@@ -6,7 +6,8 @@
 }
 
 .card{
-    min-height: 70vh;
+    /* min-height: 100vh; */
+    height: 100%;
     width: 100%;
     background-color: #fff;
     border: none;

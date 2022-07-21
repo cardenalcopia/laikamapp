@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -12,7 +13,7 @@ export class FormularioLoginComponent implements OnInit {
 
   public usuario: Usuario;
 
-  constructor(public apiService:UsuarioService, public router: Router ) {
+  constructor(public apiService:UsuarioService, public router: Router, private toastr: ToastrService) {
     this.usuario = new Usuario(null, null, null, null, null, null);
    }
 
@@ -33,6 +34,8 @@ export class FormularioLoginComponent implements OnInit {
         console.log("apiService con data error false");
         console.log(this.apiService);
         
+      }else{
+        this.toastr.error('Correo o Password incorrectos');
       }
       
     })
