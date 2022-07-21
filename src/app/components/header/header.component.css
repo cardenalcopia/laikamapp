@@ -31,8 +31,6 @@
 }
 .usuario{
     border-style: none;
-   
- 
     height: 100%;
     width: 100%;
     background-color: transparent;
@@ -45,11 +43,13 @@
     
 }
 .foto{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
+    border-radius: 100%;
+    margin-left: 15%;
 }
 
 .derecha{
@@ -59,15 +59,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
-    
+    align-items: center;  
 }
 
-/* .main{
-    width: 100%;
-    height: 100vh;
-} */
 h1{
     font-family: 'Lato', sans-serif;
     font-size:xx-large;
@@ -77,22 +71,6 @@ a{
     text-decoration: none;
     color: #f2f2f2;
 }
-/* nav{
-    background: #7904a4;
-    z-index: 1000;
-    max-width: 1000px;
-    width: 80%;
-
-}
-nav ul{
-    list-style: none;
-}
-nav ul li{
-    display: inline-block;
-}
-nav ul li a{
-    color: #fff;
-} */
 
 .desplegable{
     background-color: #430038;
@@ -100,6 +78,32 @@ nav ul li a{
     font-family: 'Roboto', sans-serif;
     font-size: large;
 }
+
+.desplegable > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 74px;
+}
+
+.ng-tns-c132-0{
+    /* height: auto; */
+    color: red;
+}
+
+.ng-tns-c132-0:nth-child(1){
+    margin-top: -7px;
+}
+
+.ng-tns-c132-0:nth-child(n){
+    border-bottom: 1px solid #72406a;
+    
+}
+
+.ng-tns-c132-0:last-child{
+    margin-bottom: -7px;
+}
+
 .desplegable:hover{
     background-color: #fd6b5b;
 }

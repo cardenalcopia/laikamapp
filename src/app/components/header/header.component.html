@@ -5,38 +5,17 @@
            <a routerLink="/home"> <h1>LaikaMapp</h1></a>
         </div>
         <div class="derecha">
-            
-                 <!-- <button class="usuario">
-                <img  class="foto" src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="">
-            </button> --> 
-            <!-- <div class="usuario">
-               
-                        <a href="#" class="bt-menu"> <img  class="foto" src="../../../assets/img/usuario.png" alt=""></a>
-                
-                <nav>
-                    <ul>
-                        <li><a routerLink="/">Perfil</a></li>
-                        <li><a routerLink="/">Apuntadas</a></li>
-                        <li><a routerLink="/">Creadas</a></li>
-                        <li><a routerLink="/">FaQs</a></li>
-                        <li><a routerLink="/">Contacto</a></li>
-                        <li><a routerLink="/">Sobre Nosotros</a></li>
-                    </ul>
-                </nav> -->
-               
-     
         
-   
-                <button mat-button [matMenuTriggerFor]="beforeMenu" class="usuario"><img  class="foto" src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt=""></button>
-                <mat-menu #beforeMenu="matMenu"  xPosition="before"   >
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/perfil">Perfil</a></button>
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/apuntadas">Mis apuntadas</a></button>
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/creadas">Mis Creadas</a></button>
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/faqs">FaQs</a></button>
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/contacto">Contacto</a></button>
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="about-us">Sobre nosotros</a></button>
-                  <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/login" (click)="cerrarSesion()" >Cerrar sesión</a></button>
-                </mat-menu>
+            <button mat-button [matMenuTriggerFor]="beforeMenu" class="usuario"><img  class="foto" src="../../../assets/img/perro.jpg" alt=""></button>
+            <mat-menu #beforeMenu="matMenu"  xPosition="before"   >
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/perfil">Perfil</a></button>
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/apuntadas">Apuntadas</a></button>
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/creadas">Creadas</a></button>
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/faqs">FaQs</a></button>
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/contacto">Contacto</a></button>
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="about-us">Sobre Nosotros</a></button>
+                <button mat-menu-item class="desplegable" style="width: 200px;"><a routerLink="/login" (click)="cerrarSesion()" >Cerrar Sesión</a></button>
+            </mat-menu>
 
            
         </div>
