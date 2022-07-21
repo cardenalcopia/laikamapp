@@ -40,12 +40,13 @@ a{
 .tituloTexto{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     /* align-items: center; */
 }
 .card__titulo{
     font-size: large;
     font-weight: 400;
+    margin-bottom: 9%;
 }
 .card__creador{
     font-size: smaller;
