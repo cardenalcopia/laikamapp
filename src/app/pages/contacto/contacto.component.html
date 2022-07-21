@@ -3,28 +3,22 @@
         <!-- <div class="row"> -->
             <!-- <div class="col"> -->
                <div class="form-container">
-                <h3 class="titulo">
-                  ¿Quieres saber más?<br>Contacta con nosotros
+                    <h3 class="titulo">
+                    ¿Si quieres más información sobre nuestra aplicación?
+                    </h3>
+                    <h3 class="titulo">
+                        No dudes en contactar con nosotros!!!
+                    </h3>
+                    <div class="form-group mt-2 w-100 email">
                     
-                </h3>
-                <div class="form-group mt-2 w-100">
-                
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                    <div class="invalid-feedback">
-                        
-                        <div>
-                            <p>
-                                El nombre es obligatorio
-                            </p>
-                        </div>
-                        
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+
                     </div>
+                    <div class="input-group mensaje">
+                        
+                        <textarea class="form-control" aria-label="With textarea" id="mensaje" placeholder="Mensaje"></textarea>
                     
-                </div>
-                <div class="input-group">
-                    <!-- <span class="input-group-text">Mensaje</span> -->
-                    <textarea class="form-control" aria-label="With textarea" id="mensaje" placeholder="Mensaje"></textarea>
-                  </div>
+                    </div>
                </div>
              <!-- <button class="btn mt-5">Enviar</button> -->
              <app-button [valor]="'Enviar'"></app-button>

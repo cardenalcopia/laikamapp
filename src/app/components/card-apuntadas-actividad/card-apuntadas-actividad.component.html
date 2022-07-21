@@ -7,7 +7,7 @@
             </div>
             <div class="tituloTexto">
                 <div class="card__titulo">{{cardsPadre.titulo}}</div>
-                <div class="card__creador">Creador</div>
+                <!-- <div class="card__creador">Creador</div> -->
             </div>
         </div>
         <div class="tipo__lugar">
@@ -16,7 +16,7 @@
         </div>
         <div class="fecha__disponible">
             <div class="card__fecha">
-                <mat-card-content class="card__fecha--date">📅 {{cardsPadre.fecha}}</mat-card-content>
+                <mat-card-content class="card__fecha--date">📅 {{cardsPadre.fecha | date}}</mat-card-content>
                 <!-- <mat-card-content class="card__informacion">📲 Para más información</mat-card-content> -->
             </div>
             <div class="card__desapuntarse">
