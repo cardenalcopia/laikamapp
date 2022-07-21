@@ -23,7 +23,7 @@
     
     
     <div *ngIf="this.apuntar == true">
-        <app-button class="btn" [valor]="'Apuntarme'" (click)="apuntadas(card.id_actividades)" *ngIf="card.disponibles>0 && card.disponibles >= this.usuarioService.usuario1.num_perros"></app-button>
+        <button class="btn" class="btn mt-4"  (click)="apuntadas(card.id_actividades)" *ngIf="card.disponibles>0 && card.disponibles >= this.usuarioService.usuario1.num_perros">Apuntarme</button>
 
         <button type="submit" class="btn mt-4" [disabled] *ngIf="this.usuarioService.usuario1.num_perros > card.disponibles || 0 >= card.disponibles" routerLink="/cards-actividades">Plazas no disponibles</button>
     </div>
