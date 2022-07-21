@@ -54,7 +54,7 @@ this.minombre=this.usuarioservice.usuario1.nombre
    }
  
 
-  ngOnInit(): void {
+  ngOnInit(): void {window.scrollTo(0,10000)
   }
 
 }

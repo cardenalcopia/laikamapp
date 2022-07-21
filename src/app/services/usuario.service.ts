@@ -8,7 +8,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private url:string = "http://localhost:3000/";
+  private url:string = "https://laikamappback.herokuapp.com/";
   public logueado:boolean = false;
   public usuario1:Usuario;
   public usuarioVotacion:Rating[];
@@ -31,12 +31,12 @@ export class UsuarioService {
   }
   getMostarPerfil(id_usuario:number)
   {
-    this.url="http://localhost:3000/prefil?id_usuario="+id_usuario
+    this.url="https://laikamappback.herokuapp.com/prefil?id_usuario="+id_usuario
     return this.http.get(this.url)
   }
   putPerfil(user1:Usuario)
   {
-    this.url="http://localhost:3000/perfil"
+    this.url="https://laikamappback.herokuapp.com/perfil"
     return this.http.put(this.url,user1)
   }
   getVotaciones(id_usuario:number):Observable<Object>{

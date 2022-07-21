@@ -16,16 +16,16 @@ export class ListadochatsService {
   public miIdchat:number;
   constructor(private http:HttpClient) { }
   getChats(id_usuario:number):Observable<object>{
-    this.url="http://localhost:3000/listado-chats"
+    this.url="https://laikamappback.herokuapp.com/listado-chats"
     return this.http.get(this.url+"?id_usuario="+id_usuario);
   }
   getOnechat(id_chat:number):Observable<object>{
-    this.url="http://localhost:3000/chats"
+    this.url="https://laikamappback.herokuapp.com/chats"
     return this.http.get(this.url+"?id_chat="+id_chat);
   }
   addConversacion(newcConversacion:Conversacion)
   {
-    this.url="http://localhost:3000/chats"
+    this.url="https://laikamappback.herokuapp.com/chats"
     return this.http.post(this.url,newcConversacion)
   }
 }

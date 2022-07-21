@@ -48,6 +48,7 @@ public getonechat(id_chat:number,titulo:string)
   })
 }
   ngOnInit(): void {this.getChats(this.usuarioservice.usuario1.id_usuario)
+   
   }
 
 }
