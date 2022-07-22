@@ -10,8 +10,8 @@
             <button routerLink="/listado-chats" class="botonvolver"><img class="volver" src="../../../assets/img/volver.png" alt=""></button>
         </div>
     </div>
-    <div class="body">
-        <div class="mensajenviado" id="mensajenviado" *ngFor="let nuevaconversacion of conversaciones">
+    <div class="body" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+        <div class="mensajenviado height:xyz;"  id="mensajenviado" *ngFor="let nuevaconversacion of conversaciones">
             
             <div *ngIf="nuevaconversacion.id_usuario!=miId" class="creador">
                 {{nuevaconversacion.mensaje}}
