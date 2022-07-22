@@ -76,6 +76,14 @@ h2{
     
     overflow: auto;
     padding: 8px;
+    /* Cambios para que los mensajes aparezcan todos en la pantalla sin recortes y en la principal */
+    /* margin-top:65px;
+    width: 100%;
+    height: 100%;
+
+    overflow: auto;
+    padding: 16px;
+    margin-bottom: 8px; */
 }
 
 .mensaje{
