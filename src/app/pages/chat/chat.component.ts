@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild,ElementRef,AfterViewInit} from '@angular/core';
 import { Chats } from 'src/app/models/chats';
 import { Conversacion } from 'src/app/models/conversacion';
 import { ActividadesService } from 'src/app/services/actividades.service';
@@ -9,7 +9,9 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements AfterViewInit {
+  @ViewChild('scrollMe') private myScrollContainer:ElementRef;
+
   public miconv:Conversacion=new Conversacion(null,null,null,null,null)
   public miId:number
   public minombre:string
@@ -52,9 +54,18 @@ this.minombre=this.usuarioservice.usuario1.nombre
       
     })
    }
+   scrollTobottom():void{
+    this.myScrollContainer.nativeElement.scrollTop=0;
+    try{
+      this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+    }catch(err){}
+   }
  
-
-  ngOnInit(): void {window.scrollTo(0,10000)
+   ngAfterViewInit()
+   {
+      this.scrollTobottom();
+   }
+  ngOnInit(): void {
   }
 
 }
