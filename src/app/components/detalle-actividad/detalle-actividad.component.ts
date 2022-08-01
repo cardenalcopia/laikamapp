@@ -67,7 +67,7 @@ export class DetalleActividadComponent implements OnInit {
      
     })
     
-    this.router.navigateByUrl('/apuntadas');
+    this.router.navigateByUrl('/cards-actividades');
 
     this.showSuccess();
   }

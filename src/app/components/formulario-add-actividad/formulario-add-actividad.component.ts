@@ -51,7 +51,7 @@ export class FormularioAddActividadComponent implements OnInit {
         console.log(data)
       })
       this.crearSuccess()
-      this.router.navigateByUrl('/creadas');
+      this.router.navigateByUrl('/cards-actividades');
 
    }
 
