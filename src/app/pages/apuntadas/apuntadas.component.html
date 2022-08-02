@@ -1,5 +1,8 @@
-<div class="cardPadre">
+<div class="cardPadre" *ngIf="this.controlador == true">
     <div class="cards" *ngFor="let actApuntada of actApuntadas">
         <app-card-apuntadas-actividad [cardsPadre]="actApuntada" (eventoCard)="borrar($event)"></app-card-apuntadas-actividad>
     </div>
+</div>
+<div class="noCard" *ngIf="this.controlador == false">
+    <div>No te has apuntado a ninguna actividad</div>
 </div>
