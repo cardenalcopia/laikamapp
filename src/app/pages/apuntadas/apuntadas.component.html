@@ -4,5 +4,12 @@
     </div>
 </div>
 <div class="noCard" *ngIf="this.controlador == false">
-    <div>No te has apuntado a ninguna actividad</div>
+    <mat-card class="card1">   
+        <div class="tituloPadre">
+            <div class="card__creador">No te has apuntado a ninguna actividad</div>
+        </div>
+        <div class="card__desapuntarse">
+            <button type="button" class="btn" id="verActvidad" routerLink="/cards-actividades" >Ver Actividades</button>
+        </div>
+    </mat-card>  
 </div>

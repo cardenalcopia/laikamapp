@@ -15,3 +15,49 @@
     width: 80%;
     
 }
+/*  */
+
+.noCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 150px;
+    border: 1px solid rgba(253, 107, 91, 1);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+a{
+    text-decoration: none;
+    color: black; 
+}
+
+/* Título parte superior */
+.tituloPadre{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    gap: 10%;
+    margin-bottom: 5%;
+}
+
+.card__desapuntarse{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#verActvidad{
+    border: 2px solid white;
+    background-color: rgba(253, 107, 91, 1);
+    color:white;
+    padding: 1% 3%;    
+
+}
