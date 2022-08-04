@@ -6,6 +6,7 @@ import { Rating } from 'src/app/models/rating';
 import { PipicanService } from 'src/app/services/pipican.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { ToastrService } from 'ngx-toastr';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-pipican',
@@ -57,7 +58,26 @@ export class PipicanComponent implements OnInit {
   public rating(num:number){
     
     this.router.navigateByUrl("/cards-pipicanes")
-    this.toast.success('Votación hecha satisfactoriamente');
+    // Toast
+    // this.toast.success('Votación hecha satisfactoriamente');
+
+    // const Toast = Swal.mixin({
+    //   toast: true,
+    //   position: 'top-end',
+    //   showConfirmButton: false,
+    //   timer: 1500,
+    //   timerProgressBar: true,
+    //   didOpen: (toast) => {
+    //     toast.addEventListener('mouseenter', Swal.stopTimer)
+    //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+    //   }
+    // })
+    
+    // Toast.fire({
+    //   icon: 'success',
+    //   title: 'Votación hecha satisfactoriamente'
+    // })
+
 
     let rating = new Rating(null, this.pipicanService.pipicanInfo.id_pipican, num, this.usuarioService.usuario1.id_usuario)
     this.pipicanService.postRating(rating).subscribe((data:Rating)=>{
@@ -75,6 +95,22 @@ export class PipicanComponent implements OnInit {
         this.pipicanService.putAvg(pipican).subscribe((data:Pipican)=>{
         console.log(data);
       })
+    })
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Votación hecha satisfactoriamente'
     })
     
   }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ActividadesService } from 'src/app/services/actividades.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { ToastrService } from 'ngx-toastr';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-formulario-editar-actividad',
   templateUrl: './formulario-editar-actividad.component.html',
@@ -38,7 +39,23 @@ export class FormularioEditarActividadComponent implements OnInit {
   }
 
   editarSuccess(){
-    this.toastr.success('Actividad editada');
+    // this.toastr.success('Actividad editada');
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Actividad editada'
+    })
   }
 
   editarActividad(miactiv:Actividades){

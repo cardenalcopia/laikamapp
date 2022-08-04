@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulario-perfil',
@@ -25,7 +26,25 @@ modificar(usuariomod:Usuario)
                                                 usuariomod.password)
   this.usuarioService.putPerfil(miusuarionuevo).subscribe((data:Usuario)=>{
     console.log(data)
-    this.toastr.success('Usuario modificado satisfactoriamente');
+    // this.toastr.success('Usuario modificado satisfactoriamente');
+    // Toast
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Usuario modificado satisfactoriamente'
+    })
+
     this.router.navigateByUrl('/home');
 })
   }

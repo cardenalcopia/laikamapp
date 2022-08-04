@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulario-login',
@@ -30,16 +31,49 @@ export class FormularioLoginComponent implements OnInit {
       
       if(data.error == false){
         this.apiService.logueado = true;
-        this.router.navigateByUrl('/home')
         console.log("apiService con data error false");
         console.log(this.apiService);
+        // Toast
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'success',
+          title: 'Usuario Correcto'
+        })
+        this.router.navigateByUrl('/home')
         
       }else{
-        this.toastr.error('Correo o Password incorrectos');
+        // this.toastr.error('Correo o Password incorrectos');
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'error',
+          title: 'Correo o Password incorrectos'
+        })
       }
       
     })
-    console.log("Inicio Sesión correcto o");
+    console.log("Inicio Sesión correcto");
      
    }
 

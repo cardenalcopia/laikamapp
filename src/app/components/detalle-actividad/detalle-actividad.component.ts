@@ -8,6 +8,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 import { Apuntadas } from 'src/app/models/apuntadas';
 import { PlacesService } from '../../services/places.service';
 import { ActividadesUsuario } from 'src/app/models/actividades-usuario';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detalle-actividad',
@@ -69,7 +70,24 @@ export class DetalleActividadComponent implements OnInit {
     
     this.router.navigateByUrl('/cards-actividades');
 
-    this.showSuccess();
+    // this.showSuccess();
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Apuntado satisfactoriamente'
+    })
   }
 
   
