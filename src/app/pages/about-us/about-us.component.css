@@ -79,6 +79,15 @@ img
     flex-direction: column;
     margin-top:3%;
     padding: 1%;
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+}
+
+.fotoUs{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
 }
 
 h4
@@ -93,8 +102,4 @@ p
     margin-bottom: 1%;
 }
 
-#perro
-{
-    width: 40px;
-    height: 40px;
-}
+
