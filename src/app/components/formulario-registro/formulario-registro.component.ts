@@ -39,7 +39,7 @@ export class FormularioRegistroComponent implements OnInit {
     })
     
     Toast.fire({
-      icon: 'error',
+      icon: 'success',
       title: 'Usuario creado satisfactoriamente'
     })
   }
